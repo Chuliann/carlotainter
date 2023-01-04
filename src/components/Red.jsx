@@ -15,6 +15,7 @@ const Red = () => {
             <div className="contenedor">
                 <h2>Red</h2>
                 
+
                 <div className="content">
                     <img src={imagen}></img>
                     <Redes />
