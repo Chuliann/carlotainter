@@ -4,8 +4,9 @@
   font-weight: bold;
 }
 @font-face {
-  font-family: primera;
+  font-family: primera2;
   src: url(fonts/Druk-XCondSuper.otf);
+  font-weight: bold;
 }
 @font-face {
   font-family: primera;
@@ -77,8 +78,10 @@ html {
     position: absolute;
     top: 40px;
     right: 40px;
-    font-family: primera;
+    font-family: tercera;
+    font-weight: bold;
     color: var(--amarillo);
+    font-size: 1.5vw;
 
     & a {
       cursor: pointer;
@@ -107,15 +110,15 @@ html {
     }
 
     & p {
-      font-size: 2rem;
+      font-size: 3.8vw;
       margin: 0;
       position: absolute;
       text-transform: uppercase;
-      letter-spacing: -1px;
+      letter-spacing: 2px;
       font-weight: bold;
-      bottom: -15px;
-      left: -150px;
-      font-family: tercera;
+      bottom: -3vh;
+      left: -10vw;
+      font-family: primera2;
       color: var(--amarillo);
     }
 
@@ -127,6 +130,7 @@ html {
       position: absolute;
       max-width: 30vw;
       left: -25vw;
+      top: -1.5vw;
     }
   }
 }
@@ -147,7 +151,6 @@ html {
   }
 
   & .contenedor {
-    max-width: 70vw;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -156,11 +159,8 @@ html {
       background-color: rgb(44, 42, 42);
       
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem 3rem;
-      margin: 1rem 1rem;
+      padding: 2vw 3vw 4vw 3vw;
+      margin: 1vw 1vw;
       border-radius: 1rem;
       cursor: pointer;
       transition: transform .5s ease-in-out;
@@ -173,13 +173,14 @@ html {
         color: var(--amarillo);
         text-shadow: -6px 0px 0 var(--violeta);
         position: absolute;
-        bottom: 30px;
+        bottom: 3vw;
         line-height: .9;
-        left: 50px;
+        left: 2.5vw;
         margin: 0;
-        font-size: 3rem;
+        font-size: 2.7vw;
         font-weight: bold;
         text-transform: uppercase;
+        font-family: segunda;
 
         & .masbajo {
           bottom: 30px;
@@ -287,7 +288,6 @@ html {
   }
 }
 
-
 #tu {
   position: relative;
   background-image: url(img/fondo_4.png);
@@ -371,7 +371,6 @@ html {
     }
   }
 }
-
 
 #proyectos {
   position: relative;
