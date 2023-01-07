@@ -1,9 +1,11 @@
 import Foto_1 from "../img/Foto_1.png";
 import logo_carlota from "../img/logo_carlota.png";
+import estrella from "../img/estrella_amarilla.png";
 
 const Inicio = () => {
     return ( 
         <div id="inicio">
+            <img className="estrella" src={estrella} alt="decoracion"></img>
             <div className="idioma">
                 <a>EN</a>
                 /

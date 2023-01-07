@@ -6,11 +6,11 @@ const Carlota = () => {
     return ( 
         <div id="carlota">
 
-            <div className="house">
-                <img src={home}></img>
-            </div>
 
             <div className="contenedor">
+                <div className="house">
+                    <img src={home}></img>
+                </div>
                 <div className="info">
                     <h2>Carlota</h2>
                     <p>En el siglo XIX, Carlota se alza contra los esclavistas.</p>

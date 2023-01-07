@@ -56,6 +56,10 @@ html {
   overflow-x: hidden;
 }
 
+.d-none {
+  display: none;
+}
+
 .house {
   
   & img {
@@ -75,6 +79,14 @@ html {
   background-position: center center;
   background-size: cover;
   position: relative;
+
+  & .estrella {
+    position: absolute;
+    z-index: 3;
+    max-width: 350px;
+    right: 0;
+    bottom: -100px;
+  }
 
   & .idioma {
     position: absolute;
@@ -215,9 +227,9 @@ html {
 
   & h2 {
     font-family: primera;
-    color: var(--violeta);
+    color: rgb(112, 27, 168);
     font-size: 1.7rem;
-    text-shadow: -6px 0px 0 white;
+    text-shadow: -3px 0px 0 white;
   }
 
   & .contenedor {
@@ -242,6 +254,7 @@ html {
       justify-self: flex-end;
       grid-column: span 2;
       margin-right: .5rem;
+      padding: .5rem 1rem;
 
       background-color: black;
       color: white;
@@ -267,7 +280,7 @@ html {
       grid-column: span 2;
       
       & textarea {
-        width: 96%;
+        width: 100%;
       }
     }
 
@@ -277,8 +290,8 @@ html {
 
       & label {
         position: absolute;
-        left: 10px;
-        top: 5px;
+        left: 8px;
+        top: 10px;
         font-family: tercera;
         color: rgb(177, 177, 177);
       }
@@ -286,11 +299,17 @@ html {
       & input {
         border: none;
         padding: .5rem;
+        width: 99%;
+        border: 0;
+        font-size: 1.1rem;
+        font-family: tercera;
       }
       & textarea {
         border: none;
         padding: .5rem;
         height: 100px;
+        font-size: 1.1rem;
+        font-family: tercera;
       }
     }
   }
@@ -402,13 +421,17 @@ html {
   padding-top: 6rem;
   padding-bottom: 5rem;
 
+  & .house {
+    margin: 0 0 1rem 1rem;
+  } 
+
   & h2 {
     font-size: 2rem;
     font-family: primera;
     font-weight: bold;
     color: var(--amarillo);
     text-shadow: -5px 0px 1px var(--violeta);
-    margin-left: 1rem;
+    margin: 0 0 1rem 1rem;
   }
 
   & .contenedor {
@@ -480,12 +503,12 @@ html {
       color: var(--violeta);
       text-shadow: -4px 0px 0px white;
       font-size: 2rem;
+      margin: 1rem 0;
     }
 
     & .links {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      margin-top: 2rem;
       & .link {
         position: relative;
         transition: all .4s ease-in-out;
@@ -527,15 +550,21 @@ html {
   margin-left: -2px;
   padding: 6rem;
 
+  
+
+
   & .contenedor {
     max-width: 80vw;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 
     & h2 {
       font-size: 2rem;
       font-family: primera;
       color: var(--amarillo-opaco);
       text-shadow: -7px 0 0 black;
+      margin: 1rem 0;
     }
 
     & .content {
@@ -598,6 +627,10 @@ html {
   display: flex;
   flex-direction: column;
 
+  & .house {
+    margin-bottom:  3rem;
+  }
+
   & .contenedor {
     
     max-width: 40vw;
@@ -638,12 +671,16 @@ html {
 
       & .correo {
         position: relative;
+        padding: 0;
+        max-width: 20vw;
+        margin-top: .5rem;
         & p {
           color: var(--amarillo);
           position: absolute;
           top: 45%;
           left: 50%;
           transform: translate(-50%, -50%);
+          margin: 0;
 
           &:last-of-type {
             margin-top: 0;
@@ -651,7 +688,8 @@ html {
         }
 
         & img {
-          max-width: 300px;
+          width: 20vw;
+          min-width: 250px;
         }
       }
     }
@@ -677,6 +715,14 @@ html {
     flex-direction: column;
     align-items: flex-end;
     height: auto;
+    padding-bottom: 11rem;
+
+    & .estrella {
+      
+      max-width: 300px;
+      bottom: -100px;
+      left: -150px;
+    }
 
     & .idioma {
       position: initial;
@@ -693,7 +739,6 @@ html {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 8rem;
       & .foto {
         width: 90vw;
         max-width: 425px;
@@ -765,6 +810,10 @@ html {
   
   #comentarios {
 
+    & .house {
+      align-self: flex-end;
+    }
+
     & .contenedor {
       display: block;
 
@@ -773,8 +822,23 @@ html {
           display: flex;
           flex-direction: column;
 
+          & h2 {
+            text-shadow: -5px 0 0 white;
+          }
+
+          & input[type="submit"] {
+            width: 85vw;
+            align-Self: center;
+            margin-right: 0;
+          }
+
           & .campo {
-            width: 500px;
+            max-width: 90vw;
+
+            & input {
+              flex: 1;
+              width: 100%;
+            }
           }
         }
 
@@ -790,6 +854,10 @@ html {
   #tu {
     height: auto;
     
+    & .house {
+      align-self: flex-end;
+      margin-right: 10vw;
+    }
   
     & .contenedor {
       max-width: 99vw;
@@ -848,9 +916,13 @@ html {
     margin-top: 0rem;
     padding-top: 2rem;
     background-image: url(./img/fondo_1.png);
+    
 
     & .house {
       top: 160px;
+      align-self: flex-end;
+      margin-right: 10vw;
+      margin-top: 3vw;
     }
   
     & .contenedor {
@@ -879,9 +951,14 @@ html {
   #prensa {
     margin-top: -6rem;
 
-    & .contenedor {
-      max-width: 90vw;
+    & .house {
+      margin-top: 3vw;
+      margin-right: 0;
+      align-self: flex-end;
+    }
 
+    & .contenedor {
+      max-width: 80vw;
       & .links {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -889,7 +966,7 @@ html {
         & .link {
           
           & img {
-            max-width: 90vw;
+            max-width: 80vw;
           }
         }
       }
@@ -901,8 +978,15 @@ html {
     margin-top: -15vh;
     overflow-x: hidden;
     margin-left: -3px;
+
+
     & .contenedor {
       max-width: 90vw;
+
+      & .house {
+        align-self: flex-end;
+      }
+
       & h2 {
         
       }
@@ -936,10 +1020,16 @@ html {
     align-items: flex-end;
     padding-top: 4rem;
     overflow: hidden;
+
+    & .house {
+      align-self: flex-end;
+    }
     
     & .contenedor {
       max-width: 85vw;
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
       position: relative;
 
       & .textura {
@@ -972,9 +1062,10 @@ html {
           font-size: 1rem;
         }
         & .correo {
-
+          max-width: 70vw;
           & img {
-            width: 85vw;
+            width: 70vw;
+            min-width: 0;
           }
         }
       }

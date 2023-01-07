@@ -1,6 +1,5 @@
-import House from "../utils/House.jsx";
 
-import img from "../img/home_3.png";
+import home from "../img/home_3.png";
 import proyecto1 from "../img/proyecto1.jpeg";
 import proyecto2 from "../img/proyecto2.jpeg";
 import proyecto3 from "../img/proyecto3.jpeg";
@@ -13,12 +12,11 @@ const Proyectos = () => {
 
     return ( 
         <div id="proyectos">
-            <House 
-                img={img}
-                section={"seccion"}
-            />
             
             <div className="contenedor">
+                <div className="house">
+                    <img src={home}></img>
+                </div>
                 <h2>Proyectos</h2>
                 <div className="contenedor__proyectos">
                     <div className="proyecto">
