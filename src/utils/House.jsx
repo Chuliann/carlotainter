@@ -1,4 +1,4 @@
-const House = ({img, seccion}) => {
+const House = ({img}) => {
     return (
         <div className="house">
             <img src={img}></img>

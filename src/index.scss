@@ -143,11 +143,12 @@ html {
   background-image: url(img/fondo_2.png);
   background-size: cover;
   background-repeat: no-repeat;
+
   display: flex;
-  align-items: center;
+  flex-direction: column;
 
   & .house {
-    color: var(--amarillo);
+    position: initial;
   }
 
   & .contenedor {
@@ -197,12 +198,18 @@ html {
 #comentarios {
   padding-top: 8rem;
   padding-bottom: 20rem;
-  position: relative;
   margin-top: -4rem;
   margin-left: -5px;
+  
+  position: relative;
+  
   background-image: url(img/fondo_3.png);
   background-size: cover;
   background-repeat: no-repeat;
+
+  & .house {
+    position: initial;
+  }
 
   & h2 {
     font-family: primera;
@@ -215,8 +222,14 @@ html {
     display: grid;
     grid-template-columns: 40fr 60fr;
     column-gap: 2rem;
+    max-width: 90vw;
+    margin: 0 auto;
   }
 
+  & .contenedor_form {
+    display: flex;
+    flex-direction: column;
+  }
 
   & .formulario {
     justify-self: flex-end;
@@ -341,7 +354,7 @@ html {
       }
 
       & span {
-        background-color: var(--amarillo-opaco);
+        background-color: var(--amarillo);
       }
     }
 
@@ -428,6 +441,8 @@ html {
           margin: .1rem;
           color: white;
           font-size: .9rem;
+          font-weight: 400;
+          font-style: italic;
         }
 
         & img {
@@ -643,6 +658,97 @@ html {
 
     & img {
       max-width: 25px;
+    }
+  }
+
+  #inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: auto;
+
+    & .idioma {
+      position: initial;
+      font-size: 1.5rem;
+      margin: 1rem 1rem 0 0;
+    }
+
+    & .contenedor {
+      max-width: 90vw;
+      height: auto;
+    }
+
+    & .img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 8rem;
+      & .foto {
+        width: 90vw;
+        max-width: 425px;
+      }
+
+      & .logo {
+        width: 88vw;
+        max-width: 400px;
+        position: initial;
+        margin-bottom: .7rem;
+        margin-top: 3rem;
+        z-index: 1;
+      }
+      & p {
+        display: none;
+      }
+
+      & .movil {
+        position: relative;
+
+        & p {
+          display: block;
+          position: absolute;
+          white-space: nowrap;
+          top: -20px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 10vw;
+          z-index: 2;
+        }
+      }
+    }
+
+  }
+
+  #menu {
+    height: auto;
+    padding-bottom: 5rem;
+    align-items: flex-end;
+    margin-top: -5rem;
+
+    & .house {
+      margin-right: 10vw;
+      margin-top: 3vw;
+    }
+
+    & .contenedor {
+      grid-template-columns: 1fr 1fr;
+      max-width: 90vw;
+
+
+      & .elemento {
+        transition: none;
+        margin: 2vw;
+
+        & p {
+          font-size: 1.3rem;
+          left: 25px;
+        }
+        & img {
+          max-width: 100px;
+        }
+        &:hover {
+          transform: none;
+        }
+      }
     }
   }
   

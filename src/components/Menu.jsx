@@ -1,6 +1,5 @@
-import House from "../utils/House.jsx";
 
-import img from "../img/home_1.png";
+import home from "../img/home_1.png";
 import foto1 from "../img/Foto_caja_1.png";
 import foto2 from "../img/Foto_caja_2.png";
 import foto3 from "../img/Foto_caja_3.png";
@@ -14,10 +13,9 @@ const Menu = () => {
 
     return ( 
         <div id="menu">
-            <House 
-                img={img}
-                section={"seccion"}
-            />
+            <div className="house">
+                <img src={home}></img>
+            </div>
 
             <div className="contenedor">
                 <div className="elemento">
