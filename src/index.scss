@@ -398,7 +398,7 @@ html {
         & p {
           color: var(--amarillo);
           position: absolute;
-          left: 37%;
+          left: 45%;
           top: 45%;
           transform: translate(-50%, -50%);
         }
@@ -897,13 +897,14 @@ html {
         }
  
         & .correo {
-          
+          max-width: 90vw;
+          margin: 0 auto;
           & p {
             font-size: 5vw;
-            
+            margin-left: 0;
           }
           & img {
-            max-width: 90vw;
+            max-width: 80vw;
           }
         }
       }
