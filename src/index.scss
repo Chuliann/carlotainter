@@ -395,10 +395,11 @@ html {
 
       & .correo {
         position: relative;
+        
         & p {
           color: var(--amarillo);
           position: absolute;
-          left: 45%;
+          left: 37%;
           top: 45%;
           transform: translate(-50%, -50%);
         }
@@ -863,7 +864,7 @@ html {
       max-width: 99vw;
   
       & h2 {
-        margin-left: 0;
+        margin-left: 1rem;
       }
   
       & .grid {
@@ -887,6 +888,7 @@ html {
         & p {
           position:initial;
           font-size: 4vw;
+          margin-top: .5rem;
           line-height: 1.3;
         }
       }
@@ -898,13 +900,14 @@ html {
  
         & .correo {
           max-width: 90vw;
-          margin: 0 auto;
+          margin: 1rem auto;
           & p {
-            font-size: 5vw;
+            font-size: 4.5vw;
             margin-left: 0;
+            left: 45%;
           }
           & img {
-            max-width: 80vw;
+            max-width: 85vw;
           }
         }
       }
