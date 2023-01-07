@@ -1,6 +1,4 @@
-import House from "../utils/House.jsx";
-
-import img from "../img/home_1.png";
+import home from "../img/home_1.png";
 import fondo_correo from "../img/boton_mail.png"
 import textura from "../img/textura_circulos_2.png";
 
@@ -8,10 +6,9 @@ const Carlota = () => {
     return ( 
         <div id="carlota">
 
-            <House 
-                img={img}
-                section={"seccion"}
-            />
+            <div className="house">
+                <img src={home}></img>
+            </div>
 
             <div className="contenedor">
                 <div className="info">

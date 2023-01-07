@@ -1,19 +1,17 @@
 
-import House from "../utils/House.jsx";
-
 import fondo_correo from "../img/boton_mail_2.png";
-import img from "../img/home_3.png";
+import home from "../img/home_3.png";
 import foto from "../img/Foto_2.png";
 
 const Tu = () => {
     return ( 
         <div id="tu">
-            <House 
-                img={img}
-                section={"seccion"}
-            />
 
             <div className="contenedor">
+                <div className="house">
+                    <img src={home}></img>
+                </div>
+
                 <h2>Tú</h2>
 
                 <div className="grid">
