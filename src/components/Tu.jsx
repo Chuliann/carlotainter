@@ -3,12 +3,14 @@ import fondo_correo from "../img/boton_mail_2.png";
 import home from "../img/home_3.png";
 import foto from "../img/Foto_2.png";
 
-const Tu = () => {
+const Tu = ({activo, desactivar, animar}) => {
+
+
     return ( 
-        <div id="tu">
+        <div id="tu" className={`transicion ${animar ? "menuActivo" : ""}`}>
 
             <div className="contenedor">
-                <div className="house">
+                <div onClick={() => desactivar()} className="house">
                     <img src={home}></img>
                 </div>
 

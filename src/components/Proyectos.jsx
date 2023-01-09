@@ -6,15 +6,15 @@ import proyecto3 from "../img/proyecto3.jpeg";
 import proyecto4 from "../img/proyecto4.jpeg";
 import proyecto5 from "../img/proyecto5.png";
 
-const Proyectos = () => {
+const Proyectos = ({desactivar, animar}) => {
 
     const lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ut aliquam consequuntur laboriosam nemo neque, facilis iste eos impedit autem dolor. Dolores, expedita suscipit! Expedita eos dolor pariatur numquam recusandae.";
 
     return ( 
-        <div id="proyectos">
+        <div id="proyectos" className={`transicion ${animar ? "menuActivo" : ""}`}>
             
             <div className="contenedor">
-                <div className="house">
+                <div className="house" onClick={desactivar}>
                     <img src={home}></img>
                 </div>
                 <h2>Proyectos</h2>

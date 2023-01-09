@@ -9,18 +9,47 @@ import Red from "./components/Red.jsx";
 import Carlota from "./components/Carlota.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activo, setActivo] = useState({
+    tu: false,
+    proyectos: false,
+    prensa: false,
+    red: false,
+    carlota: false
+  })
+  const [animar, setAnimar] = useState(false);
+
+  const desactivar = () => {
+    setAnimar(false);
+    setTimeout(() => {
+      setActivo({
+        tu: false,
+        proyectos: false,
+        prensa: false,
+        red: false,
+        carlota: false
+      })
+      document.querySelector("body").classList.remove("fijar");
+    }, 500);
+  }
 
   return (
     <div className="App">
-      <Inicio />
-      <Menu />
-      <Comentarios />
-      <Tu />
-      <Proyectos />
-      <Prensa />
-      <Red />
-      <Carlota />
+      <div className='principal'>
+        <Inicio />
+        <Menu 
+          setActivo={setActivo}
+          activo={activo}
+          setAnimar={setAnimar}
+        />
+        <Comentarios />
+      </div>
+
+      {activo.tu ? <Tu animar={animar} desactivar={desactivar} /> : null}
+      {activo.proyectos ? <Proyectos animar={animar} desactivar={desactivar}/> : null }
+      {activo.prensa ? <Prensa animar={animar} desactivar={desactivar} /> : null }
+      {activo.red ? <Red animar={animar} desactivar={desactivar} /> : null }
+      {activo.carlota ? <Carlota animar={animar} desactivar={desactivar} /> : null}
+      
     </div>
   )
 }

@@ -71,6 +71,14 @@ html {
   }
 }
 
+.fijar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
 
 #inicio {
@@ -151,6 +159,7 @@ html {
 
 #menu {
   padding-top: 4rem;
+  padding-bottom: 4rem;
   height: 105vh;
   position: relative;
   margin-top: -4rem;
@@ -160,6 +169,7 @@ html {
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   & .house {
     margin: 1rem 0 2rem 8rem;
@@ -326,9 +336,7 @@ html {
   background-image: url(img/fondo_4.png);
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -3.7rem;
-  padding-top: 6rem;
-  padding-bottom: 5rem;
+
 
   & .house {
     margin: 1rem 0 1rem 2rem;
@@ -1075,4 +1083,20 @@ html {
       }
     }
   }
+}
+
+
+.transicion {
+  position: fixed!important;
+  transform: scale(0);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  transition: transform .5s ease-in-out;
+}
+
+.menuActivo {
+  transform: scale(1,1);
 }

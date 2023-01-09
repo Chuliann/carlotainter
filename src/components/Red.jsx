@@ -4,12 +4,12 @@ import Redes from "../utils/Redes.jsx"
 import home from "../img/home_3.png";
 import imagen from "../img/Foto_3.png";
 
-const Red = () => {
+const Red = ({desactivar, animar}) => {
     return ( 
-        <div id="red">
+        <div id="red"  className={`transicion ${animar ? "menuActivo" : ""}`}>
 
             <div className="contenedor">
-                <div className="house">
+                <div className="house" onClick={desactivar}>
                     <img src={home}></img>
                 </div>
                 

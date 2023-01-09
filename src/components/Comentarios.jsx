@@ -15,9 +15,6 @@ const Comentarios = () => {
 
             <div className="contenedor">
                 <div className="contenedor_form">
-                    <div className="house">
-                        <img src={home}></img>
-                    </div>
                     
                     <FormComentarios />
 

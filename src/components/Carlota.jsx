@@ -2,13 +2,13 @@ import home from "../img/home_1.png";
 import fondo_correo from "../img/boton_mail.png"
 import textura from "../img/textura_circulos_2.png";
 
-const Carlota = () => {
+const Carlota = ({desactivar, animar}) => {
     return ( 
-        <div id="carlota">
+        <div id="carlota"  className={`transicion ${animar ? "menuActivo" : ""}`}>
 
 
             <div className="contenedor">
-                <div className="house">
+                <div className="house" onClick={desactivar}>
                     <img src={home}></img>
                 </div>
                 <div className="info">
