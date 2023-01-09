@@ -88,10 +88,10 @@ en: {
 	titulo2_3: "visibility to projects that", 
 	titulo2_4: "promote and support the struggle", 
 	titulo2_5: "for a better world",
-	titulo3_1: "Need help?",
+	titulo3_1: "Need support?",
 	titulo3_2: "Want to collaborate?",
 	titulo3_3: "Write to us at",
-	titulo4: "together@carlota.international"
+	titulo4: "hello@carlota.international"
 }
 }
 
@@ -99,12 +99,20 @@ export const proyectos = {
 	es: {
 		titulo1: "Proyectos",
 		titulo2: "Tien",
-		titulo2_1: "da"
+		titulo2_1: "da",
+		pelicula1: "La piedra en el zapato",
+		pelicula2: "La furiosa realidad",
+		pelicula3: "Evas y Marías",
+		festival: "Festival Carlota"
     },
     en: {
 	    titulo1: "Projects",
         titulo2: "shop",
-        titulo2_1: ""
+        titulo2_1: "",
+		pelicula1: "A pain in the neck",
+		pelicula2: "The raging reality",
+		pelicula3: "Evas y Marías",
+		festival: "Carlota Festival"
     }
 }
 
@@ -128,6 +136,21 @@ export const red = {
     }
 }
 
+export const peliculas = {
+	es: {
+		titulo1: "Peliculas",
+		pelicula1: "La piedra en el zapato",
+		pelicula2: "La furiosa realidad",
+		pelicula3: "Evas y Marías",
+	},
+	en: {
+		titulo1: "Movies",
+		pelicula1: "A pain in the neck",
+		pelicula2: "The raging reality",
+		pelicula3: "Evas y Marías",
+	}
+}
+
 export const carlota = {
 	es: {
 		titulo1: "Carlota",
@@ -142,12 +165,12 @@ export const carlota = {
 },
 en: {
 	titulo1: "Carlota",
-	titulo2: "In the XIX century, Carlota raised against the slavers",
-	titulo3: "In the XX century, Carlota fighted against the Apartheid.",
-	titulo4: "Nowdays, Carlota create and comunicate in support of all those local, regional and globals fights for the emancipation and liberation",
-	titulo5_1: "Need help?",
+	titulo2: "In the 19th century, Carlota stands up against the slavers.",
+	titulo3: "In the 20th century, Carlota fights against Apartheid.",
+	titulo4: "Today, Carlota creates and communicates in support of all these local, regional and global struggles for emancipation and liberation.",
+	titulo5_1: "Need support?",
 	titulo5_2: "Want to collaborate?",
-	titulo5_3: "Email us to",
-	titulo6: "colabora@carlota.international"
+	titulo5_3: "Write to us at",
+	titulo6: "hello@carlota.international"
 }
 }

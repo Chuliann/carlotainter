@@ -48,7 +48,7 @@ const Menu = ({setActivo, activo, setOcultar, idioma}) => {
                     <img src={foto4}></img>
                     <p>{menu[idioma]["titulo4"]}</p>
                 </div>
-                <div className="elemento">
+                <div className="elemento" onClick={() => handleMenu("peliculas")}>
                     <img src={foto5}></img>
                     <p>{menu[idioma]["titulo5"]}<br></br>{menu[idioma]["titulo5_1"]}</p>
                 </div>

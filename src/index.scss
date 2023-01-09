@@ -428,6 +428,10 @@ html {
 
 #proyectos {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
   background-image: url(img/fondo_5.webp);
   background-size: cover;
   background-repeat: no-repeat;
@@ -451,6 +455,7 @@ html {
 
   & .contenedor {
     max-width: 80vw;
+    height: 98vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -627,6 +632,83 @@ html {
         }
       }
 
+    }
+  }
+}
+
+#peliculas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  background-image: url(img/fondo_5.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -3.7rem;
+  margin-left: -4px;
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+
+  & .house {
+    margin: 0 0 1rem 1rem;
+  } 
+
+  & h2 {
+    font-size: 2rem;
+    font-family: primera;
+    font-weight: bold;
+    color: var(--amarillo);
+    text-shadow: -5px 0px 1px var(--violeta);
+    margin: 0 0 1rem 1rem;
+  }
+
+  & .contenedor {
+    max-width: 80vw;
+    height: 98vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & .contenedor__proyectos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      
+
+      & .proyecto {
+        margin: 0 1rem;
+        font-family: tercera;
+
+        
+        &.tienda {
+          position: relative;
+
+          & h2 {
+            position: absolute;
+            top: 15vh;
+            left: .5vw;
+            font-size: 3vw;
+            text-transform: uppercase;
+          }
+        }
+
+        & h3 {
+          color: var(--amarillo);
+          margin: 0;
+        }
+        & p {
+          margin: .1rem;
+          color: white;
+          font-size: .9rem;
+          font-weight: 400;
+          font-style: italic;
+        }
+
+        & img {
+          max-width: 17vw;
+        }
+      }
     }
   }
 }
@@ -935,11 +1017,10 @@ html {
   }
 
   #proyectos {
-    height: auto;
     margin-top: 0rem;
     padding-top: 2rem;
     background-image: url(./img/fondo_1.webp);
-    
+    height: auto;
 
     & .house {
       top: 160px;
@@ -950,9 +1031,11 @@ html {
   
     & .contenedor {
       max-width: 98vw;
+      height: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      
   
       & .contenedor__proyectos {
         display: grid;
@@ -962,6 +1045,10 @@ html {
         & .proyecto {
           margin: .5rem .5rem;
           max-width: 40vw;
+
+          &.tienda h2 {
+            font-size: 7vw;
+          }
   
           & img {
             max-width: 40vw;
@@ -1033,6 +1120,44 @@ html {
             & img {
               max-width: 80vw;
             }
+          }
+        }
+      }
+    }
+  }
+
+  #peliculas {
+    margin-top: 0rem;
+    padding-top: 2rem;
+    background-image: url(./img/fondo_1.webp);
+    height: auto;
+
+    & .house {
+      top: 160px;
+      align-self: flex-end;
+      margin-right: 10vw;
+      margin-top: 3vw;
+    }
+  
+    & .contenedor {
+      max-width: 98vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+  
+      & .contenedor__proyectos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+  
+        & .proyecto {
+          margin: .5rem .5rem;
+          max-width: 40vw;
+  
+          & img {
+            max-width: 40vw;
           }
         }
       }

@@ -6,6 +6,7 @@ import Tu from "./components/Tu.jsx";
 import Proyectos from "./components/Proyectos.jsx";
 import Prensa from "./components/Prensa.jsx";
 import Red from "./components/Red.jsx";
+import Peliculas from "./components/Peliculas.jsx";
 import Carlota from "./components/Carlota.jsx";
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         proyectos: false,
         prensa: false,
         red: false,
+        peliculas: false,
         carlota: false
       })
     }, 500);
@@ -86,11 +88,12 @@ function App() {
         </div>  
       ) : null}
 
-      {activo.tu ? <Tu animar={animar} setAnimar={setAnimar} desactivar={desactivar} idioma={idioma} /> : null}
-      {activo.proyectos ? <Proyectos animar={animar} setAnimar={setAnimar} desactivar={desactivar} idioma={idioma}/> : null }
-      {activo.prensa ? <Prensa animar={animar} setAnimar={setAnimar} desactivar={desactivar} idioma={idioma}/> : null }
-      {activo.red ? <Red animar={animar} setAnimar={setAnimar} desactivar={desactivar} idioma={idioma} /> : null }
-      {activo.carlota ? <Carlota animar={animar} setAnimar={setAnimar} desactivar={desactivar} idioma={idioma} /> : null}
+      {activo.tu ? <Tu animar={animar} desactivar={desactivar} idioma={idioma} /> : null}
+      {activo.proyectos ? <Proyectos animar={animar} desactivar={desactivar} idioma={idioma}/> : null }
+      {activo.prensa ? <Prensa animar={animar} desactivar={desactivar} idioma={idioma}/> : null }
+      {activo.red ? <Red animar={animar} desactivar={desactivar} idioma={idioma} /> : null }
+      {activo.peliculas ? <Peliculas animar={animar} desactivar={desactivar} idioma={idioma} /> : null}
+      {activo.carlota ? <Carlota animar={animar} desactivar={desactivar} idioma={idioma} /> : null}
       
     </div>
   )
