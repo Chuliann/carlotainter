@@ -1,6 +1,6 @@
-import Foto_1 from "../img/Foto_1.png";
-import logo_carlota from "../img/logo_carlota.png";
-import estrella from "../img/estrella_amarilla.png";
+import Foto_1 from "../img/Foto_1.webp";
+import logo_carlota from "../img/logo_carlota.webp";
+import estrella from "../img/estrella_amarilla.webp";
 
 import {inicio} from "../utils/idiomas.js";
 

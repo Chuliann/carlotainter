@@ -1,9 +1,11 @@
 
-import fondo_correo from "../img/boton_mail_2.png";
-import home from "../img/home_3.png";
-import foto from "../img/Foto_2.png";
+import fondo_correo from "../img/boton_mail_2.webp";
+import home from "../img/home_3.webp";
+import foto from "../img/Foto_2.webp";
 
-const Tu = ({activo, desactivar, animar}) => {
+import {tu} from "../utils/idiomas.js";
+
+const Tu = ({ desactivar, animar, idioma}) => {
 
 
     return ( 
@@ -14,17 +16,17 @@ const Tu = ({activo, desactivar, animar}) => {
                     <img src={home}></img>
                 </div>
 
-                <h2>Tú</h2>
+                <h2>{tu[idioma]["titulo1"]}</h2>
 
                 <div className="grid">
                     <div className="imagen">
                         <img src={foto}></img>
-                        <p><span>Personas de diferentes países <br></br> nos unimos para crear y dar <br></br> visibilidad a proyectos que <br></br> promueven y apoyan la lucha <br></br> por un mundo mejor.</span></p>
+                        <p><span> {tu[idioma]["titulo2_1"]} <br></br> {tu[idioma]["titulo2_2"]} <br></br> {tu[idioma]["titulo2_3"]} <br></br> {tu[idioma]["titulo2_4"]} <br></br> {tu[idioma]["titulo2_5"]}.</span></p>
                     </div>
                     <div className="info">
-                        <p>¿Necesitas apoyo? <br></br>
-                        ¿Quieres colaborar? <br></br>
-                        Escríbenos a</p>
+                        <p>{tu[idioma]["titulo3_1"]} <br></br>
+                        {tu[idioma]["titulo3_2"]} <br></br>
+                        {tu[idioma]["titulo3_3"]}</p>
                         <div className="correo">
                             <p>colabora@carlota.international</p>
                             <img src={fondo_correo}></img>

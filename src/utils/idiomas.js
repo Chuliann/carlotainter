@@ -70,52 +70,39 @@ en: {
 
 export const tu = {
 	es: {
-		titulo1: "tú",
+		titulo1: "Tú",
 		titulo2_1: "Personas de diferentes países",
 		titulo2_2: "nos unimos para crear y dar",
 		titulo2_3: "visibilidad a proyectos que",
 		titulo2_4: "promueven y apoyan la lucha", 
-		titulo2_5: "por un mundo mejor.",
+		titulo2_5: "por un mundo mejor",
 		titulo3_1: "¿Necesitas apoyo?", 
 		titulo3_2: "¿Quieres colaborar?",
-		titulo3_3: "Escríbenos a",
-		titulo4: "colabora@carlota.international"
-
-
-			
+		titulo3_3: "Escríbenos a"
 },
 en: {
-	titulo1: "you",
+	titulo1: "You",
 	titulo2_1: "People from different countries",
 	titulo2_2: "come together to create an give",
 	titulo2_3: "visibility to projects that", 
 	titulo2_4: "promote and support the fight", 
-	titulo2_5: "for a better world.",
+	titulo2_5: "for a better world",
 	titulo3_1: "Need help?",
 	titulo3_2: "Want to collaborate?",
-	titulo3_3: "Email us to",
-	titulo4: "colabora@carlota.international"
+	titulo3_3: "Email us to"
 }
 }
 
-export const Proyectos = {
+export const proyectos = {
 	es: {
 		titulo1: "Proyectos",
-		titulo2: "La piedra en el zapato",
-		titulo3: "La furiosa realidad",
-		titulo4: "Evas y Marías",
-		titulo5: "Festival",
-		titulo6: "Tienda"		
+		titulo2: "Tien",
+		titulo2_1: "da"
     },
     en: {
-	titulo1: "Projects",
-    titulo1: "Proyectos",
-    titulo2: "La piedra en el zapato",
-            titulo3: "La furiosa realidad",
-            titulo4: "Evas y Marías",
-            titulo5: "Festival",
-            titulo6: "Shop"
-
+	    titulo1: "Projects",
+        titulo2: "shop",
+        titulo2_1: ""
     }
 }
 
@@ -123,27 +110,20 @@ export const Proyectos = {
 
 export const prensa = {
 	es: {
-		titulo1: "Prensa"
-			
-},
-en: {
-	titulo2: "Press"
-
-}
+		titulo1: "Prensa"		
+    },
+    en: {
+	    titulo1: "Press"
+    }
 }
 
 export const red = {
 	es: {
-		titulo1: "Red"
-		
-		
-
-
-			
-},
-en: {
-	titulo1: "Red"
-}
+		titulo1: "Red"			
+    },
+    en: {
+	    titulo1: "Grid"
+    }
 }
 
 export const carlota = {

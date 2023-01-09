@@ -1,6 +1,6 @@
 import FormComentarios from "../components/FormComentarios.jsx";
 
-import Textura from "../img/textura_circulos_1.png";
+import Textura from "../img/textura_circulos_1.webp";
 
 const Comentarios = ({idioma}) => {
 

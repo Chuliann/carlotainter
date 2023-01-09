@@ -1,10 +1,12 @@
 
 import Redes from "../utils/Redes.jsx"
 
-import home from "../img/home_3.png";
-import imagen from "../img/Foto_3.png";
+import home from "../img/home_3.webp";
+import imagen from "../img/Foto_3.webp";
 
-const Red = ({desactivar, animar}) => {
+import {red} from "../utils/idiomas.js";
+
+const Red = ({desactivar, animar, idioma}) => {
     return ( 
         <div id="red"  className={`transicion ${animar ? "menuActivo" : ""}`}>
 
@@ -13,7 +15,7 @@ const Red = ({desactivar, animar}) => {
                     <img src={home}></img>
                 </div>
                 
-                <h2>Red</h2>
+                <h2>{red[idioma]["titulo1"]}</h2>
                 
                 <div className="content">
                     <img src={imagen}></img>

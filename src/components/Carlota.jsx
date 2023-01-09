@@ -1,8 +1,10 @@
-import home from "../img/home_1.png";
-import fondo_correo from "../img/boton_mail.png"
-import textura from "../img/textura_circulos_2.png";
+import home from "../img/home_1.webp";
+import fondo_correo from "../img/boton_mail.webp"
+import textura from "../img/textura_circulos_2.webp";
 
-const Carlota = ({desactivar, animar}) => {
+import { carlota } from "../utils/idiomas.js";
+
+const Carlota = ({desactivar, animar, idioma}) => {
     return ( 
         <div id="carlota"  className={`transicion ${animar ? "menuActivo" : ""}`}>
 
@@ -12,13 +14,13 @@ const Carlota = ({desactivar, animar}) => {
                     <img src={home}></img>
                 </div>
                 <div className="info">
-                    <h2>Carlota</h2>
-                    <p>En el siglo XIX, Carlota se alza contra los esclavistas.</p>
-                    <p>En el siglo XX, Carlota lucha contra el Apartheid.</p>
-                    <p className="opaco">Hoy en día, Carlota crea y comunica en apoyo a todas esas luchas locales, regionales y globales por la emancipación y la liberación.</p>
+                    <h2>{carlota[idioma]["titulo1"]}</h2>
+                    <p>{carlota[idioma]["titulo2"]}</p>
+                    <p>{carlota[idioma]["titulo3"]}</p>
+                    <p className="opaco">{carlota[idioma]["titulo4"]}</p>
                 </div>
                 <div className="contacto">
-                    <p>¿Necesitas apoyo? <br></br> ¿Quieres colaborar? <br></br> Escríbenos a</p>
+                    <p>{carlota[idioma]["titulo5_1"]} <br></br> {carlota[idioma]["titulo5_2"]} <br></br> {carlota[idioma]["titulo5_3"]}</p>
                     <div className="correo">
                         <p>colabora@carlota.international</p>
                         <img src={fondo_correo}></img>

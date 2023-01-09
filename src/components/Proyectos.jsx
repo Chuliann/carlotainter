@@ -1,12 +1,14 @@
 
-import home from "../img/home_3.png";
-import proyecto1 from "../img/proyecto1.jpeg";
-import proyecto2 from "../img/proyecto2.jpeg";
-import proyecto3 from "../img/proyecto3.jpeg";
-import proyecto4 from "../img/proyecto4.jpeg";
-import proyecto5 from "../img/proyecto5.png";
+import home from "../img/home_3.webp";
+import proyecto1 from "../img/proyecto1.webp";
+import proyecto2 from "../img/proyecto2.webp";
+import proyecto3 from "../img/proyecto3.webp";
+import proyecto4 from "../img/proyecto4.webp";
+import proyecto5 from "../img/proyecto5.webp";
 
-const Proyectos = ({desactivar, animar}) => {
+import {proyectos} from "../utils/idiomas.js";
+
+const Proyectos = ({desactivar, animar, idioma}) => {
 
     const lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ut aliquam consequuntur laboriosam nemo neque, facilis iste eos impedit autem dolor. Dolores, expedita suscipit! Expedita eos dolor pariatur numquam recusandae.";
 
@@ -17,7 +19,7 @@ const Proyectos = ({desactivar, animar}) => {
                 <div className="house" onClick={desactivar}>
                     <img src={home}></img>
                 </div>
-                <h2>Proyectos</h2>
+                <h2>{proyectos[idioma]["titulo1"]}</h2>
                 <div className="contenedor__proyectos">
                     <div className="proyecto">
                         <img src={proyecto1}></img>
@@ -41,7 +43,7 @@ const Proyectos = ({desactivar, animar}) => {
                     </div>
                     <div className="proyecto tienda">
                         <img src={proyecto5}></img>
-                        <h2>Tien<br></br>da</h2>
+                        <h2>{proyectos[idioma]["titulo2"]}<br></br>{proyectos[idioma]["titulo2_1"]}</h2>
                         <p> {lorem} </p> 
                     </div>
                 </div>

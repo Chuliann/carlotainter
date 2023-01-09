@@ -1,12 +1,12 @@
 
-import foto1 from "../img/Foto_caja_1.png";
-import foto2 from "../img/Foto_caja_2.png";
-import foto3 from "../img/Foto_caja_3.png";
-import foto4 from "../img/Foto_caja_4.png";
-import foto5 from "../img/Foto_caja_5.png";
-import foto6 from "../img/Foto_caja_6.png";
-import foto7 from "../img/Foto_caja_7.png";
-import foto8 from "../img/Foto_caja_8.png";
+import foto1 from "../img/Foto_caja_1.webp";
+import foto2 from "../img/Foto_caja_2.webp";
+import foto3 from "../img/Foto_caja_3.webp";
+import foto4 from "../img/Foto_caja_4.webp";
+import foto5 from "../img/Foto_caja_5.webp";
+import foto6 from "../img/Foto_caja_6.webp";
+import foto7 from "../img/Foto_caja_7.webp";
+import foto8 from "../img/Foto_caja_8.webp";
 
 import {menu} from "../utils/idiomas.js";
 
