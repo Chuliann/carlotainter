@@ -1,4 +1,4 @@
-
+import { useState, useEffect } from "react";
 import home from "../img/home_3.webp";
 import proyecto1 from "../img/proyecto1.webp";
 import proyecto2 from "../img/proyecto2.webp";
@@ -12,8 +12,15 @@ const Proyectos = ({desactivar, animar, idioma}) => {
 
     const lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ut aliquam consequuntur laboriosam nemo neque, facilis iste eos impedit autem dolor. Dolores, expedita suscipit! Expedita eos dolor pariatur numquam recusandae.";
 
+    const[activar, setActivar] = useState(false);
+
+    useEffect(() => {
+        if(animar) setActivar(true);
+        if(!animar) setActivar(false);
+    }, [animar])
+
     return ( 
-        <div id="proyectos" className={`transicion ${animar ? "menuActivo" : ""}`}>
+        <div id="proyectos" className={`transicion ${activar ? "menuActivo" : ""} `}>
             
             <div className="contenedor">
                 <div className="house" onClick={desactivar}>

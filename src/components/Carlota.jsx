@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import home from "../img/home_1.webp";
 import fondo_correo from "../img/boton_mail.webp"
 import textura from "../img/textura_circulos_2.webp";
@@ -5,8 +7,16 @@ import textura from "../img/textura_circulos_2.webp";
 import { carlota } from "../utils/idiomas.js";
 
 const Carlota = ({desactivar, animar, idioma}) => {
+
+    const[activar, setActivar] = useState(false);
+
+    useEffect(() => {
+        if(animar) setActivar(true);
+        if(!animar) setActivar(false);
+    }, [animar])
+
     return ( 
-        <div id="carlota"  className={`transicion ${animar ? "menuActivo" : ""}`}>
+        <div id="carlota"  className={`transicion ${activar ? "menuActivo" : ""}`}>
 
 
             <div className="contenedor">

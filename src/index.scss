@@ -71,18 +71,11 @@ html {
   }
 }
 
-.fijar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
 
 
 #inicio {
   height: 100vh;
-  background-image: url(img/fondo_1.png);
+  background-image: url(img/fondo_1.webp);
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -93,6 +86,7 @@ html {
     max-width: 350px;
     right: 0;
     bottom: -100px;
+    pointer-events: none;
   }
 
   & .idioma {
@@ -157,12 +151,11 @@ html {
 }
 
 #menu {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  height: 105vh;
-  position: relative;
   margin-top: -4rem;
-  background-image: url(img/fondo_2.png);
+  padding-top: 4rem;
+  height: 100vh;
+  position: relative;
+  background-image: url(img/fondo_2.webp);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -209,11 +202,22 @@ html {
         & .masbajo {
           bottom: 30px;
         }
+        
       }
 
       & img {
         max-width: 125px;
       }
+    }
+
+    & .tienda {
+      filter: brightness(.7);
+      cursor: no-drop;
+    }
+    & .correr {
+        & p {
+          left: 1vw;
+        }
     }
   }
 }
@@ -226,7 +230,7 @@ html {
   
   position: relative;
   
-  background-image: url(img/fondo_3.png);
+  background-image: url(img/fondo_3.webp);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -333,11 +337,12 @@ html {
 }
 
 #tu {
-  background-image: url(img/fondo_4.png);
+  background-image: url(img/fondo_4.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 0px center;
   margin-top: -3rem;
+  min-height: 100vh;
   padding-top: 3rem;
 
   & .house {
@@ -424,7 +429,7 @@ html {
 
 #proyectos {
   position: relative;
-  background-image: url(img/fondo_5.png);
+  background-image: url(img/fondo_5.webp);
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -3.7rem;
@@ -496,7 +501,7 @@ html {
 
 #prensa {
   position: relative;
-  background-image: url(img/fondo_6.png);
+  background-image: url(img/fondo_6.webp);
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -4rem;
@@ -554,7 +559,7 @@ html {
 
 #red {
   position: relative;
-  background-image: url(img/fondo_7.png);
+  background-image: url(img/fondo_7.webp);
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -4rem;
@@ -629,11 +634,12 @@ html {
 
 #carlota {
   position: relative;
-  background-image: url(img/fondo_8.png);
+  background-image: url(img/fondo_8.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -4rem;
-  padding: 10vw 0 0 0;
+  background-position: center -75px;
+  padding-top: 1rem;
+  margin-right: -10px;
 
   display: flex;
   flex-direction: column;
@@ -816,6 +822,11 @@ html {
           transform: none;
         }
       }
+      & .correr {
+        & p {
+          left: 10px;
+        }
+    }
     }
   }
   
@@ -924,12 +935,11 @@ html {
     }
   }
 
-
   #proyectos {
     height: auto;
     margin-top: 0rem;
     padding-top: 2rem;
-    background-image: url(./img/fondo_1.png);
+    background-image: url(./img/fondo_1.webp);
     
 
     & .house {
@@ -1090,15 +1100,18 @@ html {
 
 .transicion {
   position: fixed!important;
-  transform: scale(0);
   top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+
+  transform: scale(0);
   z-index: 10;
-  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, opacity .5s ease-in-out;
 }
 
 .menuActivo {
-  transform: scale(1,1);
+  transform: scale(1);
+  opacity: 1;
 }

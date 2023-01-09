@@ -1,15 +1,21 @@
-
+import { useEffect, useState } from "react";
 import fondo_correo from "../img/boton_mail_2.webp";
 import home from "../img/home_3.webp";
 import foto from "../img/Foto_2.webp";
 
 import {tu} from "../utils/idiomas.js";
 
-const Tu = ({ desactivar, animar, idioma}) => {
+const Tu = ({ desactivar, idioma, animar}) => {
 
+    const[activar, setActivar] = useState(false);
+
+    useEffect(() => {
+        if(animar) setActivar(true);
+        if(!animar) setActivar(false);
+    }, [animar])
 
     return ( 
-        <div id="tu" className={`transicion ${animar ? "menuActivo" : ""}`}>
+        <div id="tu" className={`transicion ${activar ? "menuActivo" : ""}`}>
 
             <div className="contenedor">
                 <div onClick={() => desactivar()} className="house">

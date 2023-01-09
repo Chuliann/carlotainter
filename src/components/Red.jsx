@@ -1,4 +1,4 @@
-
+import { useState, useEffect } from "react";
 import Redes from "../utils/Redes.jsx"
 
 import home from "../img/home_3.webp";
@@ -7,8 +7,15 @@ import imagen from "../img/Foto_3.webp";
 import {red} from "../utils/idiomas.js";
 
 const Red = ({desactivar, animar, idioma}) => {
+    const[activar, setActivar] = useState(false);
+
+    useEffect(() => {
+        if(animar) setActivar(true);
+        if(!animar) setActivar(false);
+    }, [animar])
+
     return ( 
-        <div id="red"  className={`transicion ${animar ? "menuActivo" : ""}`}>
+        <div id="red"  className={`transicion ${activar ? "menuActivo" : ""}`}>
 
             <div className="contenedor">
                 <div className="house" onClick={desactivar}>

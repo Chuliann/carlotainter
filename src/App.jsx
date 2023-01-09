@@ -50,6 +50,9 @@ function App() {
     }, 500);
   }
 
+  useEffect(() => {
+    setAnimar(true);
+  }, [activo]);
 
   useEffect(() => {
 
@@ -77,17 +80,17 @@ function App() {
             setOcultar={setOcultar}
             idioma={idioma}
           />
-          <Comentarios 
+          {/* <Comentarios 
             idioma={idioma}
-          />
+          /> */}
         </div>  
       ) : null}
 
-      {activo.tu ? <Tu animar={animar} desactivar={desactivar} idioma={idioma} /> : null}
-      {activo.proyectos ? <Proyectos animar={animar} desactivar={desactivar} idioma={idioma}/> : null }
-      {activo.prensa ? <Prensa animar={animar} desactivar={desactivar} idioma={idioma}/> : null }
-      {activo.red ? <Red animar={animar} desactivar={desactivar} idioma={idioma} /> : null }
-      {activo.carlota ? <Carlota animar={animar} desactivar={desactivar} idioma={idioma} /> : null}
+      {activo.tu ? <Tu animar={animar} setAnimar={setAnimar} desactivar={desactivar} idioma={idioma} /> : null}
+      {activo.proyectos ? <Proyectos animar={animar} setAnimar={setAnimar} desactivar={desactivar} idioma={idioma}/> : null }
+      {activo.prensa ? <Prensa animar={animar} setAnimar={setAnimar} desactivar={desactivar} idioma={idioma}/> : null }
+      {activo.red ? <Red animar={animar} setAnimar={setAnimar} desactivar={desactivar} idioma={idioma} /> : null }
+      {activo.carlota ? <Carlota animar={animar} setAnimar={setAnimar} desactivar={desactivar} idioma={idioma} /> : null}
       
     </div>
   )

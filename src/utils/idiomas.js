@@ -36,7 +36,7 @@ en: {
     titulo2_2: "cts",
 	titulo3: "shop",
 	titulo3_1: "",
-	titulo4: "red",
+	titulo4: "grid",
 	titulo5: "mo",
 	titulo5_1: "vies",
 	titulo6: "fes",

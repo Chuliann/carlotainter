@@ -10,7 +10,7 @@ import foto8 from "../img/Foto_caja_8.webp";
 
 import {menu} from "../utils/idiomas.js";
 
-const Menu = ({setActivo, activo, setAnimar, setOcultar, idioma}) => {
+const Menu = ({setActivo, activo, setOcultar, idioma}) => {
 
     const handleMenu = (seccion) => {
         setActivo({
@@ -18,11 +18,8 @@ const Menu = ({setActivo, activo, setAnimar, setOcultar, idioma}) => {
             [seccion]: true
         });
         setTimeout(() => {
-            setAnimar(true);
-        }, 500);
-        setTimeout(() => {
             setOcultar(true);
-        }, 1000)
+        }, 450)
     }
 
     return ( 
@@ -55,11 +52,11 @@ const Menu = ({setActivo, activo, setAnimar, setOcultar, idioma}) => {
                     <img src={foto5}></img>
                     <p>{menu[idioma]["titulo5"]}<br></br>{menu[idioma]["titulo5_1"]}</p>
                 </div>
-                <div className="elemento">
+                <div className="elemento" onClick={() => window.open("https://festival.carlota.international/")}>
                     <img src={foto6}></img>
                     <p>{menu[idioma]["titulo6"]}<br></br>{menu[idioma]["titulo6_1"]}<br></br>{menu[idioma]["titulo6_2"]}</p>
                 </div>
-                <div className="elemento" onClick={() => handleMenu("prensa")}>
+                <div className={`elemento ${idioma == "en" ? "correr" : ""}`} onClick={() => handleMenu("prensa")}>
                     <img src={foto7}></img>
                     <p>{menu[idioma]["titulo7"]} <br></br>{menu[idioma]["titulo7_1"]}</p>
                 </div>
