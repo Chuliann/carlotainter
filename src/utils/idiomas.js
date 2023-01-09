@@ -4,7 +4,7 @@ export const inicio = {
 		titulo: "COMUNICACIÓN & CREACIÓN"	
     },
     en: {
-	    titulo: "comunication & creation"
+	    titulo: "COMMUNICATION & CREATION"
     }
 }
 
@@ -78,18 +78,20 @@ export const tu = {
 		titulo2_5: "por un mundo mejor",
 		titulo3_1: "¿Necesitas apoyo?", 
 		titulo3_2: "¿Quieres colaborar?",
-		titulo3_3: "Escríbenos a"
+		titulo3_3: "Escríbenos a",
+		titulo4: "colabora@carlota.international"
 },
 en: {
 	titulo1: "You",
 	titulo2_1: "People from different countries",
 	titulo2_2: "come together to create an give",
 	titulo2_3: "visibility to projects that", 
-	titulo2_4: "promote and support the fight", 
+	titulo2_4: "promote and support the struggle", 
 	titulo2_5: "for a better world",
 	titulo3_1: "Need help?",
 	titulo3_2: "Want to collaborate?",
-	titulo3_3: "Email us to"
+	titulo3_3: "Write to us at",
+	titulo4: "together@carlota.international"
 }
 }
 

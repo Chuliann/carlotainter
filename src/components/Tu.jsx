@@ -34,7 +34,7 @@ const Tu = ({ desactivar, idioma, animar}) => {
                         {tu[idioma]["titulo3_2"]} <br></br>
                         {tu[idioma]["titulo3_3"]}</p>
                         <div className="correo">
-                            <p>colabora@carlota.international</p>
+                            <p>{tu[idioma]["titulo4"]}</p>
                             <img src={fondo_correo}></img>
                         </div>
                     </div>

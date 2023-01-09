@@ -390,7 +390,6 @@ html {
         line-height: 1.8;
         font-weight: bold;
         color: rgb(41, 41, 41);
-    
       }
 
       & span {
@@ -1044,6 +1043,7 @@ html {
     align-items: flex-end;
     padding-top: 4rem;
     overflow: hidden;
+    height: 100vh;
 
     & .house {
       align-self: flex-end;
