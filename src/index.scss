@@ -341,9 +341,9 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px center;
-  margin-top: -3rem;
+  margin-top: -3vw;
   min-height: 100vh;
-  padding-top: 3rem;
+  padding-top: 3vw;
 
   & .house {
     margin: 1rem 0 1rem 2rem;
@@ -435,9 +435,9 @@ html {
   background-image: url(img/fondo_5.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -3.7rem;
+  margin-top: -5VW;
+  padding-top: 5vw;
   margin-left: -4px;
-  padding-top: 6rem;
   padding-bottom: 5rem;
 
   & .house {
@@ -645,9 +645,9 @@ html {
   background-image: url(img/fondo_5.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -3.7rem;
+  margin-top: -5VW;
+  padding-top: 5vw;
   margin-left: -4px;
-  padding-top: 6rem;
   padding-bottom: 5rem;
 
   & .house {
@@ -718,8 +718,9 @@ html {
   background-image: url(img/fondo_8.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center -75px;
-  padding-top: 1rem;
+  background-position: center center;
+  padding-top: 1vw;
+  margin-top: -3vw;
   margin-right: -10px;
 
   display: flex;
@@ -727,6 +728,7 @@ html {
 
   & .house {
     margin-bottom:  3rem;
+    margin-top: 3rem;
   }
 
   & .contenedor {
@@ -1167,8 +1169,10 @@ html {
   #carlota {
     align-items: flex-end;
     padding-top: 4rem;
-    overflow: hidden;
-    height: 100vh;
+    overflow: auto;
+    height: auto;
+    margin-top: -5rem;
+    overflow-x: hidden;
 
     & .house {
       align-self: flex-end;
