@@ -8,7 +8,9 @@ import foto6 from "../img/Foto_caja_6.png";
 import foto7 from "../img/Foto_caja_7.png";
 import foto8 from "../img/Foto_caja_8.png";
 
-const Menu = ({setActivo, activo, setAnimar}) => {
+import {menu} from "../utils/idiomas.js";
+
+const Menu = ({setActivo, activo, setAnimar, setOcultar, idioma}) => {
 
     const handleMenu = (seccion) => {
         setActivo({
@@ -19,9 +21,8 @@ const Menu = ({setActivo, activo, setAnimar}) => {
             setAnimar(true);
         }, 500);
         setTimeout(() => {
-            document.querySelector("body").classList.add("fijar");
-            
-        }, 1000);
+            setOcultar(true);
+        }, 1000)
     }
 
     return ( 
@@ -30,35 +31,41 @@ const Menu = ({setActivo, activo, setAnimar}) => {
             <div className="contenedor">
                 <div onClick={() => handleMenu("tu")} className="elemento">
                     <img src={foto1}></img>
-                    <p>Tú</p>
+                    <p>{menu[idioma]["titulo1"]}</p>
                 </div>
                 <div className="elemento" onClick={() => handleMenu("proyectos")}>
                     <img src={foto2}></img>
-                    <p>Pro<br></br>yec<br></br>tos</p>
+                    <p>
+                        {menu[idioma]["titulo2"]}
+                        <br></br>
+                        {menu[idioma]["titulo2_1"]}
+                        <br></br>
+                        {menu[idioma]["titulo2_2"]}
+                    </p>
                 </div>
                 <div className="elemento tienda">
                     <img src={foto3}></img>
-                    <p>tien <br></br> da</p>
+                    <p>{menu[idioma]["titulo3"]} <br></br> {menu[idioma]["titulo3_1"]}</p>
                 </div>
                 <div className="elemento" onClick={() => handleMenu("red")}>
                     <img src={foto4}></img>
-                    <p>red</p>
+                    <p>{menu[idioma]["titulo4"]}</p>
                 </div>
                 <div className="elemento">
                     <img src={foto5}></img>
-                    <p>pe <br></br>lis</p>
+                    <p>{menu[idioma]["titulo5"]}<br></br>{menu[idioma]["titulo5_1"]}</p>
                 </div>
                 <div className="elemento">
                     <img src={foto6}></img>
-                    <p>fes<br></br>ti<br></br>val</p>
+                    <p>{menu[idioma]["titulo6"]}<br></br>{menu[idioma]["titulo6_1"]}<br></br>{menu[idioma]["titulo6_2"]}</p>
                 </div>
                 <div className="elemento" onClick={() => handleMenu("prensa")}>
                     <img src={foto7}></img>
-                    <p>pren <br></br>sa</p>
+                    <p>{menu[idioma]["titulo7"]} <br></br>{menu[idioma]["titulo7_1"]}</p>
                 </div>
                 <div className="elemento" onClick={() => handleMenu("carlota")}>
                     <img src={foto8}></img>
-                    <p>car<br></br>lo<br></br>ta</p>
+                    <p>{menu[idioma]["titulo8"]}<br></br>{menu[idioma]["titulo8_1"]}<br></br>{menu[idioma]["titulo8_2"]}</p>
                 </div>
             </div>
         </div>

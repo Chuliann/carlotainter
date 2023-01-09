@@ -1,9 +1,8 @@
 import FormComentarios from "../components/FormComentarios.jsx";
 
 import Textura from "../img/textura_circulos_1.png";
-import home from "../img/home_2.png";
 
-const Comentarios = () => {
+const Comentarios = ({idioma}) => {
 
 
 
@@ -15,8 +14,7 @@ const Comentarios = () => {
 
             <div className="contenedor">
                 <div className="contenedor_form">
-                    
-                    <FormComentarios />
+                    <FormComentarios idioma={idioma}/>
 
                 </div>
                 

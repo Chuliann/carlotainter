@@ -72,7 +72,6 @@ html {
 }
 
 .fijar {
-  overflow: hidden;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -306,6 +305,7 @@ html {
         color: rgb(177, 177, 177);
       }
 
+
       & input {
         border: none;
         padding: .5rem;
@@ -327,7 +327,7 @@ html {
   & .textura1 {
     max-width: 39vw;
     position: absolute;
-    bottom: 15px;
+    bottom: 0;
     margin-left: 5px;
   }
 }
@@ -336,7 +336,9 @@ html {
   background-image: url(img/fondo_4.png);
   background-size: cover;
   background-repeat: no-repeat;
-
+  background-position: center center;
+  margin-top: -3rem;
+  padding-top: 3rem;
 
   & .house {
     margin: 1rem 0 1rem 2rem;
