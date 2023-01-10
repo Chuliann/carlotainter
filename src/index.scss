@@ -346,6 +346,8 @@ html {
   min-height: 100vh;
   padding-top: 15vw;
 
+  overflow-x: hidden;
+
   display: flex;
   align-items: center;
 
@@ -353,6 +355,21 @@ html {
     margin: 1rem 0 1rem 2rem;
   }
 
+  & .estrella {
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    max-width: 25vw;
+    top: 10vw;
+    right: -13.2vw;
+    transform: translate(-20vw, -20vw);
+    transition: transform 1s ease-in-out, opacity .1s ease;
+  }
+
+  & .estrella.activo {
+    transform: translate(0);
+    opacity: 1;
+  }
 
   & p {
     font-family: tercera;
@@ -515,6 +532,24 @@ html {
   margin-top: -4rem;
   padding: 6rem 0;
 
+  overflow: hidden;
+
+  & .estrella {
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    max-width: 25vw;
+    bottom: -10vw;
+    right: -5vw;
+    transform: translate(50vw, 75vw);
+    transition: transform 1s ease-in-out, opacity .1s ease;
+  }
+
+  & .estrella.activo {
+    transform: translate(0);
+    opacity: 1;
+  }
+
   & .contenedor {
     max-width: 60vw;
     margin: 0 auto;
@@ -574,10 +609,27 @@ html {
   padding: 6rem;
   padding-top: 10vw;
   margin-left: -2px;
+  overflow: hidden;
 
   
   & .house {
     padding-top: 1rem;
+  }
+
+  & .estrella {
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    max-width: 25vw;
+    top: 0vw;
+    right: -10vw;
+    transform: translate(-20vw, -20vw);
+    transition: transform 1s ease-in-out, opacity .1s ease;
+  }
+
+  & .estrella.activo {
+    transform: translate(0);
+    opacity: 1;
   }
 
   & .contenedor {
@@ -966,10 +1018,18 @@ html {
 
   #tu {
     height: auto;
+    padding-top: 18vw;
     
     & .house {
       align-self: flex-end;
       margin-right: 10vw;
+    }
+
+    & .estrella {
+      max-width: 50vw;
+      right: -30vw;
+      top: 52vw;
+      transform: translate(-50vw, -75vw);
     }
   
     & .contenedor {
@@ -1077,6 +1137,10 @@ html {
       align-self: flex-end;
     }
 
+    & .estrella {
+      display: none;
+    }
+
     & .contenedor {
       max-width: 80vw;
       & .links {
@@ -1098,6 +1162,10 @@ html {
     margin-top: -15vh;
     overflow-x: hidden;
     margin-left: -3px;
+
+    & .estrella {
+      display: none;
+    }
 
 
     & .contenedor {
