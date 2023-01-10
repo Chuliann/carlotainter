@@ -346,8 +346,11 @@ html {
   min-height: 100vh;
   padding-top: 18vw;
 
+  display: flex;
+  align-items: center;
+
   & .house {
-    margin: 1rem 0 1rem 2rem;
+    margin: 1rem 0 2.5rem 2rem;
   }
 
 
@@ -378,10 +381,6 @@ html {
 
     & .imagen {
       position: relative;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      top: 0;
 
       & img {
         max-width: 50vw;
@@ -389,9 +388,9 @@ html {
 
       & p {
         position: absolute;
-        top: 5vw;
-        right: -17vw;
-        font-size: 1.5rem;
+        top: 4vw;
+        right: -20vw;
+        font-size: 1.8vw;
         line-height: 1.8;
         font-weight: bold;
         color: rgb(41, 41, 41);
@@ -408,7 +407,7 @@ html {
       }
       & p {
         color: white;
-        font-size: 1.1rem;
+        font-size: 1.3vw;
         margin-left: 1rem;
       }
 
@@ -424,7 +423,7 @@ html {
         }
 
         & img {
-          max-width: 300px;
+          max-width: 22vw;
         }
       }
     }
