@@ -529,9 +529,8 @@ html {
   background-image: url(img/fondo_6.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -4rem;
-  padding: 6rem 0;
-
+  margin-top: -15vw;
+  padding: 15vw 0 6rem 0;
   overflow: hidden;
 
   & .estrella {
@@ -568,9 +567,12 @@ html {
     & .links {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      align-self: center;
+
       & .link {
         position: relative;
         transition: all .4s ease-in-out;
+        margin: .2rem 1rem;
         & p {
           position: absolute;
           color: var(--amarillo-opaco);
@@ -1129,7 +1131,6 @@ html {
   }
 
   #prensa {
-    margin-top: -6rem;
 
     & .house {
       margin-top: 3vw;
