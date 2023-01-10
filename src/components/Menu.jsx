@@ -27,11 +27,11 @@ const Menu = ({setActivo, activo, setOcultar, idioma}) => {
 
             <div className="contenedor">
                 <div onClick={() => handleMenu("tu")} className="elemento">
-                    <img src={foto1}></img>
+                    <img loading="lazy" src={foto1}></img>
                     <p>{menu[idioma]["titulo1"]}</p>
                 </div>
                 <div className="elemento" onClick={() => handleMenu("proyectos")}>
-                    <img src={foto2}></img>
+                    <img loading="lazy" src={foto2}></img>
                     <p>
                         {menu[idioma]["titulo2"]}
                         <br></br>
@@ -41,27 +41,27 @@ const Menu = ({setActivo, activo, setOcultar, idioma}) => {
                     </p>
                 </div>
                 <div className="elemento tienda">
-                    <img src={foto3}></img>
+                    <img loading="lazy" src={foto3}></img>
                     <p>{menu[idioma]["titulo3"]} <br></br> {menu[idioma]["titulo3_1"]}</p>
                 </div>
                 <div className="elemento" onClick={() => handleMenu("red")}>
-                    <img src={foto4}></img>
+                    <img loading="lazy" src={foto4}></img>
                     <p>{menu[idioma]["titulo4"]}</p>
                 </div>
                 <div className="elemento" onClick={() => handleMenu("peliculas")}>
-                    <img src={foto5}></img>
+                    <img loading="lazy" src={foto5}></img>
                     <p>{menu[idioma]["titulo5"]}<br></br>{menu[idioma]["titulo5_1"]}</p>
                 </div>
                 <div className="elemento" onClick={() => window.open("https://festival.carlota.international/")}>
-                    <img src={foto6}></img>
+                    <img loading="lazy" src={foto6}></img>
                     <p>{menu[idioma]["titulo6"]}<br></br>{menu[idioma]["titulo6_1"]}<br></br>{menu[idioma]["titulo6_2"]}</p>
                 </div>
                 <div className={`elemento ${idioma == "en" ? "correr" : ""}`} onClick={() => handleMenu("prensa")}>
-                    <img src={foto7}></img>
+                    <img loading="lazy" src={foto7}></img>
                     <p>{menu[idioma]["titulo7"]} <br></br>{menu[idioma]["titulo7_1"]}</p>
                 </div>
                 <div className="elemento" onClick={() => handleMenu("carlota")}>
-                    <img src={foto8}></img>
+                    <img loading="lazy" src={foto8}></img>
                     <p>{menu[idioma]["titulo8"]}<br></br>{menu[idioma]["titulo8_1"]}<br></br>{menu[idioma]["titulo8_2"]}</p>
                 </div>
             </div>

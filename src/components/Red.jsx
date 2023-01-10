@@ -19,13 +19,13 @@ const Red = ({desactivar, animar, idioma}) => {
 
             <div className="contenedor">
                 <div className="house" onClick={desactivar}>
-                    <img src={home}></img>
+                    <img loading="lazy" src={home}></img>
                 </div>
                 
                 <h2>{red[idioma]["titulo1"]}</h2>
                 
                 <div className="content">
-                    <img src={imagen}></img>
+                    <img loading="lazy" src={imagen}></img>
                     <Redes />
                 </div>
             </div>

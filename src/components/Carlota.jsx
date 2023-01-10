@@ -21,7 +21,7 @@ const Carlota = ({desactivar, animar, idioma}) => {
 
             <div className="contenedor">
                 <div className="house" onClick={desactivar}>
-                    <img src={home}></img>
+                    <img loading="lazy" src={home}></img>
                 </div>
                 <div className="info">
                     <h2>{carlota[idioma]["titulo1"]}</h2>
@@ -33,10 +33,10 @@ const Carlota = ({desactivar, animar, idioma}) => {
                     <p>{carlota[idioma]["titulo5_1"]} <br></br> {carlota[idioma]["titulo5_2"]} <br></br> {carlota[idioma]["titulo5_3"]}</p>
                     <div className="correo">
                         <p>colabora@carlota.international</p>
-                        <img src={fondo_correo}></img>
+                        <img loading="lazy" src={fondo_correo}></img>
                     </div>
                 </div>
-                <img className="textura" src={textura}></img>
+                <img loading="lazy" className="textura" src={textura}></img>
             </div>
         </div>
      );

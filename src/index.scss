@@ -37,6 +37,7 @@
   font-family: tercera;
   src: url(fonts/GlacialIndifference-Regular.otf);
 }
+@import "./styles/login";
 
 :root {
   --amarillo: rgb(255, 230, 0);
@@ -377,15 +378,19 @@ html {
 
     & .imagen {
       position: relative;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
 
       & img {
-        max-width: 700px;
+        max-width: 50vw;
       }
 
       & p {
         position: absolute;
-        top: 50px;
-        right: -250px;
+        top: 5vw;
+        right: -17vw;
         font-size: 1.5rem;
         line-height: 1.8;
         font-weight: bold;
@@ -722,8 +727,8 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding-top: 1vw;
-  margin-top: -3vw;
+  padding-top: 10vw;
+  margin-top: -10vw;
   margin-right: -20px;
   padding-right: 20px;
 
@@ -937,7 +942,7 @@ html {
 
           & input[type="submit"] {
             width: 85vw;
-            align-Self: center;
+            align-self: center;
             margin-right: 0;
           }
 

@@ -16,7 +16,7 @@ const Redes = () => {
             {redes.map((red) => (
                 <a target="_blank" className="red" href={red.link} key={red.id}>
                     <p>{red.titulo}</p>
-                    <img src={fondoRed}></img>
+                    <img loading="lazy" src={fondoRed}></img>
                 </a>
             ))}
         </div>

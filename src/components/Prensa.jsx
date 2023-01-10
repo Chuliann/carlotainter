@@ -20,7 +20,7 @@ const Prensa = ({desactivar, animar, idioma}) => {
 
             <div className="contenedor">
                 <div className="house" onClick={desactivar}>
-                    <img src={home}></img>
+                    <img loading="lazy" src={home}></img>
                 </div>
                 <h2>{prensa[idioma]["titulo1"]}</h2>
                 <Links />

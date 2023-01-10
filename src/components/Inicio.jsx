@@ -7,7 +7,7 @@ import {inicio} from "../utils/idiomas.js";
 const Inicio = ({handleIdioma, idioma}) => {
     return ( 
         <div id="inicio">
-            <img className="estrella" src={estrella} alt="decoracion"></img>
+            <img loading="lazy" className="estrella" src={estrella} alt="decoracion"></img>
             <div className="idioma">
                 <a onClick={() => handleIdioma("en")}>EN</a>
                 /
@@ -15,9 +15,9 @@ const Inicio = ({handleIdioma, idioma}) => {
             </div>
             <div className="contenedor">
                 <div className="img">
-                    <img className="logo" src={logo_carlota}></img>
+                    <img loading="lazy" className="logo" src={logo_carlota}></img>
                     <div className="movil">
-                        <img className="foto" src={Foto_1}></img>
+                        <img loading="lazy" className="foto" src={Foto_1}></img>
                         <p>{inicio[idioma]["titulo"]}</p>
                     </div>
                     <p>{inicio[idioma]["titulo"]}</p>

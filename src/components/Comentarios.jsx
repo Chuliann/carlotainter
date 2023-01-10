@@ -10,7 +10,7 @@ const Comentarios = ({idioma}) => {
         <div id="comentarios">
             
 
-            <img className="textura1" src={Textura}></img>
+            <img loading="lazy" className="textura1" src={Textura}></img>
 
             <div className="contenedor">
                 <div className="contenedor_form">

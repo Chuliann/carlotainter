@@ -20,20 +20,20 @@ const Peliculas = ({desactivar, animar, idioma}) => {
         <div id="peliculas" className={`transicion ${activar ? "menuActivo" : ""} `}>
             <div className="contenedor">
                 <div className="house" onClick={desactivar}>
-                    <img src={home}></img>
+                    <img loading="lazy" src={home}></img>
                 </div>
                 <h2>{peliculas[idioma]["titulo1"]}</h2>
                 <div className="contenedor__proyectos">
                     <div className="proyecto">
-                        <img src={proyecto1}></img>
+                        <img loading="lazy" src={proyecto1}></img>
                         <h3>{peliculas[idioma]["pelicula1"]}, 2023</h3>
                     </div>
                     <div className="proyecto">
-                        <img src={proyecto2}></img>
+                        <img loading="lazy" src={proyecto2}></img>
                         <h3>{peliculas[idioma]["pelicula2"]}, 2023</h3>
                     </div>
                     <div className="proyecto">
-                        <img src={proyecto3}></img>
+                        <img loading="lazy" src={proyecto3}></img>
                         <h3>{peliculas[idioma]["pelicula3"]}, 2023</h3>
                     </div>
                 </div>

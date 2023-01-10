@@ -26,7 +26,7 @@ const Links = () => {
             {links.map((link) => (
                 <a target="_blank" className="link" href={link.link} key={link.id}>
                     <p>{link.titulo}</p>
-                    <img src={fondoLink}></img>
+                    <img loading="lazy" src={fondoLink}></img>
                 </a>
 
             ))}
