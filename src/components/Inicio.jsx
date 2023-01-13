@@ -5,6 +5,9 @@ import estrella from "../img/estrella_amarilla.webp";
 import {inicio} from "../utils/idiomas.js";
 
 const Inicio = ({handleIdioma, idioma}) => {
+
+    
+
     return ( 
         <div id="inicio">
             <img loading="lazy" className="estrella" src={estrella} alt="decoracion"></img>

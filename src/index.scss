@@ -1132,6 +1132,7 @@ html {
   }
 
   #prensa {
+    overflow-y: scroll;
 
     & .house {
       margin-top: 3vw;
@@ -1164,6 +1165,7 @@ html {
     margin-top: -15vh;
     overflow-x: hidden;
     margin-left: -3px;
+    overflow-y: scroll;
 
     & .estrella {
       display: none;
