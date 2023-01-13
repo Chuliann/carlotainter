@@ -11,6 +11,7 @@ import Red from "./components/Red.jsx";
 import Peliculas from "./components/Peliculas.jsx";
 import Carlota from "./components/Carlota.jsx";
 import Login from "./components/admin/Login.jsx";
+import Admin from "./components/admin/Admin.jsx";
 
 function App() {
     /* Estado de seccion activa */
@@ -137,6 +138,7 @@ function App() {
                         </>
                     } />
                   <Route path="/login" element={<Login />}/>
+                  <Route path="/admin" element={<Admin />}/>
             </Routes>
         </Router>
     );

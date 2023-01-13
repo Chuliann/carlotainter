@@ -1,4 +1,4 @@
-import Foto_1 from "../img/Foto_1.webp";
+import gif from "../img/gif-final.gif";
 import logo_carlota from "../img/logo_carlota.webp";
 import estrella from "../img/estrella_amarilla.webp";
 
@@ -17,7 +17,7 @@ const Inicio = ({handleIdioma, idioma}) => {
                 <div className="img">
                     <img loading="lazy" className="logo" src={logo_carlota}></img>
                     <div className="movil">
-                        <img loading="lazy" className="foto" src={Foto_1}></img>
+                        <img loading="lazy" className="foto" src={gif}></img>
                         <p>{inicio[idioma]["titulo"]}</p>
                     </div>
                     <p>{inicio[idioma]["titulo"]}</p>

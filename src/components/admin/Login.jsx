@@ -6,7 +6,7 @@ const Login = () => {
 
 
     const [campos, setCampos] = useState({
-        usuario: "",
+        user: "",
         password: ""
     });
     const [error, setError] = useState(null);
@@ -21,8 +21,8 @@ const Login = () => {
     const handleSubmit = async e => {
         e.preventDefault();
 
-        let{usuario, password} = campos;
-        if(usuario === "" || password === "") {
+        let{user, password} = campos;
+        if(user === "" || password === "") {
             setError("Los campos son obligatorios");
             return;
         }
@@ -31,12 +31,22 @@ const Login = () => {
             method: "POST",
             body: JSON.stringify(campos),
             headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
+                'Content-Type': 'application/json'
             },            
         })
         .then(response => response.json())
-        .then(data => console.log(data));
+        .then(data => {
+            if(data.status === 'error') {
+                setError('Uno o mas campos Son incorrectos')
+            } else {
+                localStorage.setItem("token", true);
+                siguientePagina();
+            }
+        });
+    }
+
+    const siguientePagina = () => {
+        window.location.href = "/admin";
     }
 
     useEffect(() => {
@@ -52,8 +62,8 @@ const Login = () => {
                     <label>Usuario:</label>
                     <input 
                         type="text"
-                        value={campos.usuario}
-                        name="usuario"
+                        value={campos.user}
+                        name="user"
                         onChange={e => handleChange(e)}
                     />
                     <label>Contraseña:</label>
