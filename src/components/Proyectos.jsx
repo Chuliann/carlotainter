@@ -22,32 +22,32 @@ const Proyectos = ({desactivar, animar, idioma}) => {
             
             <div className="contenedor">
                 <div className="house" onClick={desactivar}>
-                    <img loading="lazy" src={home}></img>
+                    <img src={home}></img>
                 </div>
                 <h2>{proyectos[idioma]["titulo1"]}</h2>
                 <div className="contenedor__proyectos">
                     <div className="proyecto">
-                        <img loading="lazy" src={proyecto1}></img>
+                        <img src={proyecto1}></img>
                         <h3>{proyectos[idioma]["pelicula1"]}</h3>
 
                     </div>
                     <div className="proyecto">
-                        <img loading="lazy" src={proyecto2}></img>
+                        <img src={proyecto2}></img>
                         <h3>{proyectos[idioma]["pelicula2"]}</h3>
 
                     </div>
                     <div className="proyecto">
-                        <img loading="lazy" src={proyecto3}></img>
+                        <img src={proyecto3}></img>
                         <h3>{proyectos[idioma]["pelicula3"]}</h3>
 
                     </div>
                     <div className="proyecto">
-                        <img loading="lazy" src={proyecto4}></img>
+                        <img src={proyecto4}></img>
                         <h3>{proyectos[idioma]["festival"]}</h3>
 
                     </div>
                     <div className="proyecto tienda">
-                        <img loading="lazy" src={proyecto5}></img>
+                        <img src={proyecto5}></img>
                         <h2>{proyectos[idioma]["titulo2"]}<br></br>{proyectos[idioma]["titulo2_1"]}</h2>
  
                     </div>

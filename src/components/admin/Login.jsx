@@ -29,7 +29,10 @@ const Login = () => {
 
         await fetch(`${import.meta.env.VITE_DEV_REQUEST}/login.php`, {
             method: "POST",
-            body: JSON.stringify(campos),
+            body: JSON.stringify({
+                ...campos,
+                'tipo': "login"
+            }),
             headers: {
                 'Content-Type': 'application/json'
             },            
@@ -38,8 +41,9 @@ const Login = () => {
         .then(data => {
             if(data.status === 'error') {
                 setError('Uno o mas campos Son incorrectos')
-            } else {
-                localStorage.setItem("token", true);
+            } 
+            if(data.status === 'ok') {
+                localStorage.setItem("token", data.token);
                 siguientePagina();
             }
         });

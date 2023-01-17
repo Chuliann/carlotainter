@@ -1,16 +1,18 @@
 import gif from "../img/gif-final.gif";
+import foto1 from "../img/Foto_1.webp";
 import logo_carlota from "../img/logo_carlota.webp";
 import estrella from "../img/estrella_amarilla.webp";
 
 import {inicio} from "../utils/idiomas.js";
+import { useState } from "react";
 
 const Inicio = ({handleIdioma, idioma}) => {
 
-    
+    const [imagen, setImagen] = useState(false);
 
     return ( 
         <div id="inicio">
-            <img loading="lazy" className="estrella" src={estrella} alt="decoracion"></img>
+            <img className="estrella" src={estrella} alt="decoracion"></img>
             <div className="idioma">
                 <a onClick={() => handleIdioma("en")}>EN</a>
                 /
@@ -18,9 +20,10 @@ const Inicio = ({handleIdioma, idioma}) => {
             </div>
             <div className="contenedor">
                 <div className="img">
-                    <img loading="lazy" className="logo" src={logo_carlota}></img>
+                    <img className="logo" src={logo_carlota}></img>
                     <div className="movil">
-                        <img loading="lazy" className="foto" src={gif}></img>
+                        <img onLoad={() => setImagen(true)} className={`foto ${imagen ? "" : "d-none"}`} src={gif}></img>
+                        <img src={foto1} className={`foto ${imagen ? "d-none" : ""}`} alt="imagenInicio"></img>
                         <p>{inicio[idioma]["titulo"]}</p>
                     </div>
                     <p>{inicio[idioma]["titulo"]}</p>

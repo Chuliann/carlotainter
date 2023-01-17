@@ -89,7 +89,7 @@ function App() {
                                         setOcultar={setOcultar}
                                         idioma={idioma}
                                     />
-                                    {/* <Comentarios idioma={idioma} /> */}
+                                    <Comentarios idioma={idioma} />
                                 </div>
                             ) : null}
 

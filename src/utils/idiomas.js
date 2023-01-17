@@ -56,7 +56,9 @@ export const comentarios = {
 		titulo2: "Nombre completo",
 		titulo3: "Correo electrónico",
 		titulo4: "Déjanos tu comentario",
-        titulo5: "Enviar"
+        titulo5: "Enviar",
+		exito: "El comentario fue enviado con exito",
+		fracaso: "Todos los campos son obligatorios"
 			
 },
 en: {
@@ -64,7 +66,9 @@ en: {
 	titulo2: "Full name",
 	titulo3: "E-mail",
 	titulo4: "Leave us a comment",
-    titulo5: "Send"
+    titulo5: "Send",
+	exito: "The comment was sent successfully",
+	fracaso: "All the fields are required"
 }
 }
 
