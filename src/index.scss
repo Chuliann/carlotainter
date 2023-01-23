@@ -517,11 +517,9 @@ html {
   flex-direction: column;
   align-items: center;
   
-  background-image: url(img/fondo_5.webp);
+  background-image: url(img/fondo_5.png);
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -5VW;
-  padding-top: 5vw;
   margin-left: -4px;
   padding-bottom: 5rem;
 
@@ -714,7 +712,7 @@ html {
     & h2 {
       font-size: 2rem;
       font-family: primera;
-      color: var(--amarillo-opaco);
+      color: var(--amarillo);
       text-shadow: -7px 0 0 black;
       margin: 1rem 0;
     }
@@ -776,11 +774,9 @@ html {
   flex-direction: column;
   align-items: center;
   
-  background-image: url(img/fondo_5.webp);
+  background-image: url(img/fondo_5.png);
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -5VW;
-  padding-top: 5vw;
   margin-left: -4px;
   padding-bottom: 5rem;
 
@@ -947,7 +943,7 @@ html {
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    height: auto;
+    height: 100vh;
     padding-bottom: 22vh;
 
     & .estrella {
@@ -977,7 +973,15 @@ html {
         max-width: 425px;
       }
 
-      & .logo {
+      & .logo_i {
+        width: 88vw;
+        max-width: 400px;
+        position: initial;
+        margin-bottom: .7rem;
+        margin-top: 3rem;
+        z-index: 1;
+      }
+      & .logo_f {
         width: 88vw;
         max-width: 400px;
         position: initial;
@@ -1010,9 +1014,7 @@ html {
   #menu {
     height: auto;
     align-items: flex-end;
-    margin-top: -5rem;
-    padding-top: 9rem;
-    padding-bottom: 6rem;
+    padding: 2rem 0 7rem 0;
 
     & .house {
       margin-right: 10vw;
@@ -1048,7 +1050,8 @@ html {
   }
   
   #comentarios {
-    margin-top: -12vh;
+
+    padding: 0;
 
     & .house {
       align-self: flex-end;
@@ -1171,8 +1174,9 @@ html {
 
   #proyectos {
     margin-top: 0rem;
+    margin-bottom: 0;
     padding-top: 2rem;
-    background-image: url(./img/fondo_1.webp);
+    background-image: url(./img/fondo_8.png);
     height: auto;
 
     & .house {
@@ -1196,7 +1200,7 @@ html {
         justify-items: center;
   
         & .proyecto {
-          margin: .5rem .5rem;
+          margin: 2rem .5rem;
           max-width: 40vw;
 
           &.tienda h2 {
@@ -1291,7 +1295,7 @@ html {
   #peliculas {
     margin-top: 0rem;
     padding-top: 2rem;
-    background-image: url(./img/fondo_1.webp);
+    background-image: url(./img/fondo_8.png);
     height: auto;
 
     & .house {
@@ -1315,7 +1319,7 @@ html {
         justify-items: center;
   
         & .proyecto {
-          margin: .5rem .5rem;
+          margin: 4rem .5rem;
           max-width: 40vw;
   
           & img {

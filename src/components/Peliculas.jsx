@@ -26,15 +26,15 @@ const Peliculas = ({desactivar, animar, idioma}) => {
                 <div className="contenedor__proyectos">
                     <div className="proyecto">
                         <img  src={proyecto1}></img>
-                        <h3>{peliculas[idioma]["pelicula1"]}, 2023</h3>
+                        <h3>"{peliculas[idioma]["pelicula1"]}"<br></br> -2023</h3>
                     </div>
                     <div className="proyecto">
                         <img  src={proyecto2}></img>
-                        <h3>{peliculas[idioma]["pelicula2"]}, 2023</h3>
+                        <h3>"{peliculas[idioma]["pelicula2"]}"<br></br> -2023</h3>
                     </div>
                     <div className="proyecto">
                         <img  src={proyecto3}></img>
-                        <h3>{peliculas[idioma]["pelicula3"]}, 2023</h3>
+                        <h3>"{peliculas[idioma]["pelicula3"]}"<br></br> -2023</h3>
                     </div>
                 </div>
             </div>
