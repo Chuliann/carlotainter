@@ -65,7 +65,7 @@ html {
 }
 
 .house {
-  
+  max-width: 50px;
   & img {
     max-width: 25px;
   }
@@ -79,7 +79,8 @@ html {
 
 #inicio {
   height: 100vh;
-  background-image: url(img/fondo_1.webp);
+  margin-left: -2px;
+  background-image: url(img/fondo_1.png);
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -145,23 +146,28 @@ html {
       max-width: 50vw;
     }
 
-    & .logo {
+    & .logo_f {
       position: absolute;
       max-width: 30vw;
       left: -25vw;
       top: -1.5vw;
     }
+
+    & .logo_i {
+      position: absolute;
+      max-width: 30vw;
+      left: -23vw;
+      top: -2vw;
+    }
   }
 }
 
 #menu {
-  margin-top: -4rem;
-  padding-top: 4rem;
-  height: 100vh;
   position: relative;
-  background-image: url(img/fondo_2.webp);
+  background-image: url(img/fondo_2.png);
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -227,15 +233,13 @@ html {
 }
 
 #comentarios {
-  padding-top: 20vh;
-  padding-bottom: 2rem;
-  margin-top: -10vh;
+  height: 100vh;
+  padding: 4rem 0;
   margin-left: -5px;
-  height: 120vh;
   
   position: relative;
   
-  background-image: url(img/fondo_3.webp);
+  background-image: url(img/fondo_3.png);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -365,6 +369,7 @@ html {
     margin: .5rem 1rem;
     overflow-y: scroll;
     max-height: 70vh;
+    font-family: tercera;
 
     & .comentario {
       border-bottom: 2px solid black;
@@ -470,7 +475,7 @@ html {
         top: 4vw;
         right: -20vw;
         font-size: 1.8vw;
-        line-height: 1.8;
+        line-height: 1.4;
         font-weight: bold;
         color: rgb(41, 41, 41);
       }
@@ -481,9 +486,6 @@ html {
     }
 
     & .info {
-      p {
-        font-weight: bold;
-      }
       & p {
         color: white;
         font-size: 1.3vw;
@@ -492,7 +494,7 @@ html {
 
       & .correo {
         position: relative;
-        
+        margin-top: .5rem;
         & p {
           color: var(--amarillo);
           position: absolute;
@@ -580,6 +582,7 @@ html {
 
         & img {
           max-width: 13vw;
+          height: 90%;
         }
       }
     }
@@ -588,12 +591,15 @@ html {
 
 #prensa {
   position: relative;
-  background-image: url(img/fondo_6.webp);
+  background-image: url(img/fondo_6.png);
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -15vw;
-  padding: 17vw 0 6rem 0;
   overflow: hidden;
+
+  padding-bottom: 4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   & .estrella {
     position: absolute;
@@ -666,14 +672,17 @@ html {
 
 #red {
   position: relative;
-  background-image: url(img/fondo_7.webp);
+  background-image: url(img/fondo_7.png);
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -10vw;
-  padding: 6rem;
-  padding-top: 10vw;
+  padding: 1rem;
   margin-left: -2px;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 15vh;
 
   
   & .house {
@@ -685,7 +694,7 @@ html {
     z-index: 10;
     opacity: 0;
     max-width: 25vw;
-    top: 0vw;
+    top: -10vw;
     right: -10vw;
     transform: translate(-20vw, -20vw);
     transition: transform 1s ease-in-out, opacity .1s ease;
@@ -715,6 +724,7 @@ html {
       grid-template-columns: 2fr 1fr;
       justify-content: center;
       align-items: flex-end;
+      column-gap: 2rem;
       
       & img {
         max-width: 50vw;
@@ -728,12 +738,13 @@ html {
           position: relative;
           transition: all .4s ease-in-out;
           margin: .3rem 0;
+          max-width: 20vw;
           & p {
             position: absolute;
             font-weight: bold;
             color: black;
             left: 1vw;
-            top: 50%;
+            top: 45%;
             transform: translateY(-50%);
             z-index: 2;
             font-family: tercera;
@@ -830,6 +841,7 @@ html {
 
         & img {
           max-width: 17vw;
+          height: 100%;
         }
       }
     }
@@ -838,14 +850,10 @@ html {
 
 #carlota {
   position: relative;
-  background-image: url(img/fondo_8.webp);
+  background-image: url(img/fondo_8.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding-top: 10vw;
-  margin-top: -10vw;
-  margin-right: -20px;
-  padding-right: 20px;
 
   display: flex;
   flex-direction: column;
@@ -876,7 +884,7 @@ html {
         font-family: tercera;
         font-size: 1.6vw;
         color: white;
-        font-weight: bold;
+        font-weight: regular;
         margin: 1rem 0;
       }
       & .opaco {

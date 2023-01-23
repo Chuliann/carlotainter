@@ -20,7 +20,7 @@ const Inicio = ({handleIdioma, idioma}) => {
             </div>
             <div className="contenedor">
                 <div className="img">
-                    <img className="logo" src={logo_carlota}></img>
+                    <img className={`${imagen ? "logo_i" : "logo_f"}`} src={logo_carlota}></img>
                     <div className="movil">
                         <img onLoad={() => setImagen(true)} className={`foto ${imagen ? "" : "d-none"}`} src={gif}></img>
                         <img src={foto1} className={`foto ${imagen ? "d-none" : ""}`} alt="imagenInicio"></img>
