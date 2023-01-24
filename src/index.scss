@@ -837,7 +837,7 @@ html {
 
         & img {
           max-width: 17vw;
-          height: 100%;
+          height: 80%;
         }
       }
     }
@@ -929,6 +929,19 @@ html {
       bottom: 0;
     }
   }
+}
+
+.transicion {
+  position: fixed!important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: initial;
+
+  transform: scale(0);
+  z-index: 10;
+  transition: transform .5s ease-in-out, opacity .5s ease-in-out;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1099,8 +1112,8 @@ html {
   }
 
   #tu {
-    height: auto;
-    padding-top: 24vh;
+    height: 120vh;
+    padding-top: 25vh;
     margin-top: -20vh;
     display: block;
     
@@ -1216,7 +1229,6 @@ html {
   }
 
   #prensa {
-    overflow-y: scroll;
 
     & .house {
       margin-top: 3vw;
@@ -1233,6 +1245,7 @@ html {
       & .links {
         grid-template-columns: 1fr;
         justify-items: center;
+        padding-bottom: 5rem;
 
         & .link {
           
@@ -1245,11 +1258,10 @@ html {
   }
 
   #red {
-    padding: 10rem 1.5rem 5rem 1.5rem;
-    margin-top: -15vh;
     overflow-x: hidden;
     margin-left: -3px;
-    overflow-y: scroll;
+
+    display: block;
 
     & .estrella {
       display: none;
@@ -1279,6 +1291,7 @@ html {
 
           margin-top: 1rem;
           & .red {
+            max-width: 90vw;
             & p {
               font-size: 5vw;
               left: 5vw;
@@ -1319,7 +1332,7 @@ html {
         justify-items: center;
   
         & .proyecto {
-          margin: 4rem .5rem;
+          margin: 2rem .5rem;
           max-width: 40vw;
   
           & img {
@@ -1332,16 +1345,17 @@ html {
 
   #carlota {
     align-items: flex-end;
-    padding-top:6rem;
     overflow: auto;
-    height: auto;
-    margin-top: -5rem;
+    height: 110vh;
+    padding-top: 15vh;
+    margin-top: -10vh;
     margin-left: -10px;
     padding-right: 0;
     overflow-x: hidden;
 
     & .house {
       align-self: flex-end;
+      margin: 1rem 0rem 1rem 0;
     }
     
     & .contenedor {
@@ -1386,25 +1400,27 @@ html {
             width: 70vw;
             min-width: 0;
           }
+          & p {
+            font-size: 5vw;
+          }
         }
       }
     }
   }
+
+  .transicion {
+    position: relative!important;
+    bottom: initial;
+    left: initial;
+    top: initial;
+    right: initial;
+  }
 }
 
 
-.transicion {
-  position: fixed!important;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: scroll;
 
-  transform: scale(0);
-  z-index: 10;
-  transition: transform .5s ease-in-out, opacity .5s ease-in-out;
-}
+
+
 
 .menuActivo {
   transform: scale(1);
