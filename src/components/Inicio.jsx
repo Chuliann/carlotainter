@@ -1,5 +1,4 @@
-import gif from "../img/gif-final.gif";
-import foto1 from "../img/Foto_1.webp";
+import gif from "../img/Gifokotro.gif";
 import logo_carlota from "../img/logo_carlota.webp";
 import estrella from "../img/estrella_amarilla.webp";
 
@@ -23,7 +22,7 @@ const Inicio = ({handleIdioma, idioma}) => {
                     <img className={`${imagen ? "logo_i" : "logo_f"}`} src={logo_carlota}></img>
                     <div className="movil">
                         <img onLoad={() => setImagen(true)} className={`foto ${imagen ? "" : "d-none"}`} src={gif}></img>
-                        <img src={foto1} className={`foto ${imagen ? "d-none" : ""}`} alt="imagenInicio"></img>
+                        <div className={`foto ${imagen ? "d-none" : ""}`} alt="imagenInicio"></div>
                         <p>{inicio[idioma]["titulo"]}</p>
                     </div>
                     <p>{inicio[idioma]["titulo"]}</p>
