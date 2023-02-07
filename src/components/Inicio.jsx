@@ -1,4 +1,4 @@
-import gif from "../img/Gifokotro.gif";
+import gif from "../img/gifinicio2.gif";
 import logo_carlota from "../img/logo_carlota.webp";
 import estrella from "../img/estrella_amarilla.webp";
 
