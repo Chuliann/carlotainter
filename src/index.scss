@@ -556,10 +556,10 @@ html {
 
           & h2 {
             position: absolute;
-            top: 15vh;
+            bottom: 40px;
             left: 42%;
             transform: translateX(-50%);
-            font-size: 2.2rem;
+            font-size: 2rem;
             text-transform: uppercase;
           }
         }
@@ -965,9 +965,6 @@ html {
   opacity: 1;
 }
 
-.d-none {
-  display: none;
-}
 
 @keyframes rotar {
   from {
@@ -1248,6 +1245,7 @@ html {
           &.tienda h2 {
             font-size: 7vw;
             left: 13vw;
+            bottom: 20px;
           }
   
           & img {
