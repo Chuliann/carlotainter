@@ -3,11 +3,9 @@ import logo_carlota from "../img/logo_carlota.webp";
 import estrella from "../img/estrella_amarilla.webp";
 
 import {inicio} from "../utils/idiomas.js";
-import { useState } from "react";
 
-const Inicio = ({handleIdioma, idioma}) => {
+const Inicio = ({handleIdioma, idioma, cargoElsitio}) => {
 
-    const [imagen, setImagen] = useState(false);
 
     return ( 
         <div id="inicio">
@@ -19,10 +17,9 @@ const Inicio = ({handleIdioma, idioma}) => {
             </div>
             <div className="contenedor">
                 <div className="img">
-                    <img className={`${imagen ? "logo_i" : "logo_f"}`} src={logo_carlota}></img>
+                    <img className="logo_i" src={logo_carlota}></img>
                     <div className="movil">
-                        <img onLoad={() => setImagen(true)} className={`foto ${imagen ? "" : "d-none"}`} src={gif}></img>
-                        <div className={`foto ${imagen ? "d-none" : ""}`} alt="imagenInicio"></div>
+                        <img onLoad={() => cargoElsitio()} className="foto" src={gif}></img>
                         <p>{inicio[idioma]["titulo"]}</p>
                     </div>
                     <p>{inicio[idioma]["titulo"]}</p>

@@ -13,6 +13,8 @@ import Carlota from "./components/Carlota.jsx";
 import Login from "./components/admin/Login.jsx";
 import Admin from "./components/admin/Admin.jsx";
 
+import Estrella from "./img/estrella_amarilla.webp";
+
 function App() {
     /* Estado de seccion activa */
     const [activo, setActivo] = useState({
@@ -31,6 +33,8 @@ function App() {
 
     /* Estado del idioma */
     const [idioma, setIdioma] = useState("en");
+
+    const [carga, setCarga] = useState(true);
 
     /* Cambia el idioma de localstorage y el estado de react */
     const handleIdioma = (idioma) => {
@@ -54,11 +58,19 @@ function App() {
         }, 500);
     };
 
+    const cargoElsitio = () => {
+        setTimeout(() => {
+            
+            setCarga(false);
+        }, 1000);
+    }
+
     useEffect(() => {
         setAnimar(true);
     }, [activo]);
 
     useEffect(() => {
+
         /* Chequea el idioma elegido o setea el default */
         let idioma = localStorage.getItem("idioma_carlota");
         if (idioma) {
@@ -78,18 +90,29 @@ function App() {
                         <>
                             {!ocultar ? (
                                 <div>
-                                    <Inicio
-                                        handleIdioma={handleIdioma}
-                                        idioma={idioma}
-                                    />
-                                    <Menu
-                                        setActivo={setActivo}
-                                        activo={activo}
-                                        setAnimar={setAnimar}
-                                        setOcultar={setOcultar}
-                                        idioma={idioma}
-                                    />
-                                    <Comentarios idioma={idioma} />
+                                    <div className={`contenedor_estrella ${!carga ? "d-none" : ""}`}>
+                                        <img
+                                            className="estrella_carga"
+                                            src={Estrella}
+                                            alt="spinnin_carga"
+                                        ></img>
+                                    </div>
+                                    <div className={`${!carga ? "" : "o-0"}`}>
+                                        <Inicio
+                                            handleIdioma={handleIdioma}
+                                            idioma={idioma}
+                                            setCarga={setCarga}
+                                            cargoElsitio={cargoElsitio}
+                                        />
+                                        <Menu
+                                            setActivo={setActivo}
+                                            activo={activo}
+                                            setAnimar={setAnimar}
+                                            setOcultar={setOcultar}
+                                            idioma={idioma}
+                                        />
+                                        <Comentarios idioma={idioma} />
+                                    </div>
                                 </div>
                             ) : null}
 
@@ -136,9 +159,10 @@ function App() {
                                 />
                             ) : null}
                         </>
-                    } />
-                  <Route path="/login" element={<Login />}/>
-                  <Route path="/admin" element={<Admin />}/>
+                    }
+                />
+                <Route path="/login" element={<Login />} />
+                <Route path="/admin" element={<Admin />} />
             </Routes>
         </Router>
     );

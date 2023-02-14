@@ -225,11 +225,7 @@ html {
       filter: brightness(.7);
       cursor: no-drop;
     }
-    & .correr {
-        & p {
-          left: 1vw;
-        }
-    }
+    
   }
 }
 
@@ -561,8 +557,9 @@ html {
           & h2 {
             position: absolute;
             top: 15vh;
-            left: .5vw;
-            font-size: 3vw;
+            left: 42%;
+            transform: translateX(-50%);
+            font-size: 2.2rem;
             text-transform: uppercase;
           }
         }
@@ -942,6 +939,45 @@ html {
   transition: transform .5s ease-in-out, opacity .5s ease-in-out;
 }
 
+.contenedor_estrella {
+  background-image: url(./img/fondo_1.png);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  
+}
+
+.estrella_carga {
+  max-width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: rotar 4s infinite linear;
+}
+
+.o-0 {
+  opacity: 0;
+}
+
+.o-100 {
+  opacity: 1;
+}
+
+.d-none {
+  display: none;
+}
+
+@keyframes rotar {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(359deg);
+  }
+}
+
 @media only screen and (max-width: 768px) {
 
   .house {
@@ -1043,7 +1079,7 @@ html {
 
         & p {
           font-size: 1.3rem;
-          left: 25px;
+          left: 50%;
         }
         & img {
           max-width: 100px;
@@ -1052,11 +1088,6 @@ html {
           transform: none;
         }
       }
-      & .correr {
-        & p {
-          left: 10px;
-        }
-    }
     }
   }
   
@@ -1216,6 +1247,7 @@ html {
 
           &.tienda h2 {
             font-size: 7vw;
+            left: 13vw;
           }
   
           & img {
