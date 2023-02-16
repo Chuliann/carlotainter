@@ -20,10 +20,10 @@ const Inicio = ({handleIdioma, idioma, cargoElsitio}) => {
                 <div className="img">
                     <img className="logo_i" src={logo_carlota}></img>
                     <div className="movil">
-                        <video className="foto" width="50vw" height="auto" autoPlay muted loop>
+                        {/* <video className="foto" width="50vw" height="auto" autoPlay muted loop>
                             <source src={gif2} type="video/mp4"></source>
-                        </video>
-                        {/* <img onLoad={() => cargoElsitio()} className="foto" src={gif}></img> */}
+                        </video> */}
+                        <img onLoad={() => cargoElsitio()} className="foto" src={gif}></img>
                         <p>{inicio[idioma]["titulo"]}</p>
                     </div>
                     <p>{inicio[idioma]["titulo"]}</p>
