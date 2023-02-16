@@ -34,7 +34,7 @@ function App() {
     /* Estado del idioma */
     const [idioma, setIdioma] = useState("en");
 
-    const [carga, setCarga] = useState(true);
+    const [carga, setCarga] = useState(false);
 
     /* Cambia el idioma de localstorage y el estado de react */
     const handleIdioma = (idioma) => {
