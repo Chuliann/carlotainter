@@ -29,14 +29,23 @@ const Carlota = ({desactivar, animar, idioma}) => {
                     <p>{carlota[idioma]["titulo3"]}</p>
                     <p className="opaco">{carlota[idioma]["titulo4"]}</p>
                 </div>
-                <div className="contacto">
+                <div className="contacto pc">
                     <p>{carlota[idioma]["titulo5_1"]} <br></br> {carlota[idioma]["titulo5_2"]} <br></br> {carlota[idioma]["titulo5_3"]}</p>
                     <div className="correo">
                         <p>colabora@carlota.international</p>
                         <img loading="lazy" src={fondo_correo}></img>
                     </div>
                 </div>
-                <img loading="lazy" className="textura" src={textura}></img>
+                <div className="textura__contenedor">
+                    <img loading="lazy" className="textura" src={textura}></img>
+                    <div className="contacto celular">
+                        <p>{carlota[idioma]["titulo5_1"]} <br></br> {carlota[idioma]["titulo5_2"]} <br></br> {carlota[idioma]["titulo5_3"]}</p>
+                        <div className="correo">
+                            <p>colabora@carlota.international</p>
+                            <img loading="lazy" src={fondo_correo}></img>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
      );

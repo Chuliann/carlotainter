@@ -75,7 +75,9 @@ html {
   }
 }
 
-
+.celular {
+  display: none;
+}
 
 #inicio {
   height: 100vh;
@@ -981,6 +983,13 @@ html {
     margin-right: 10vw;
     margin-top: 3vw;
   }
+  .celular {
+    display: block;
+  }
+
+  .pc {
+    display: none;
+  }
 
   #inicio {
     display: flex;
@@ -1374,12 +1383,11 @@ html {
   #carlota {
     align-items: flex-end;
     overflow: auto;
-    height: 110vh;
-    padding-top: 15vh;
-    margin-top: -10vh;
+    height: 100vh;
     margin-left: -10px;
     padding-right: 0;
     overflow-x: hidden;
+
 
     & .house {
       align-self: flex-end;
@@ -1388,19 +1396,28 @@ html {
     
     & .contenedor {
       max-width: 85vw;
+      height: 100vh;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       position: relative;
 
+      & .textura__contenedor {
+        position: relative;
+        height: 50vh;
+      }
+
       & .textura {
-        left: -8vw;
-        width: 100vw;
+        left: -1vw;
+        min-width: 300px;
+        width: 101vw;
+        margin: 0 0 -2rem -2rem;
         z-index: 1;
+        
       }
 
       & .info {
-        padding-bottom: 100vw;
+        
         & h2 {
           font-size: 1.4rem;
           text-shadow: -5px 0 0 var(--violeta);
@@ -1414,9 +1431,9 @@ html {
       & .contacto {
         z-index: 2;
         position: absolute;
-        bottom: 40vw;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
 
         & p {
           margin-left: 0;
