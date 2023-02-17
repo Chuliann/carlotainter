@@ -136,7 +136,7 @@ html {
       text-transform: uppercase;
       letter-spacing: 2px;
       font-weight: bold;
-      bottom: 0vh;
+      bottom: -4vh;
       left: -6vw;
       font-family: primera2;
       color: var(--amarillo);
@@ -146,18 +146,11 @@ html {
       width: 50vw;
     }
 
-    & .logo_f {
-      position: absolute;
-      max-width: 30vw;
-      left: -25vw;
-      top: -1.5vw;
-    }
-
     & .logo_i {
       position: absolute;
       max-width: 30vw;
-      left: -22vw;
-      top: -2vw;
+      left: -24.5vw;
+      top: -1.75vw;
     }
   }
 }
@@ -946,14 +939,21 @@ html {
   left: 0;
   bottom: 0;
   right: 0;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor_estrella h2 {
+  font-size: 1.5rem;
+  font-family: segunda;
+  font-weight: 400;
+  color: var(--amarillo);
 }
 
 .estrella_carga {
   max-width: 200px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   animation: rotar 4s infinite linear;
 }
 
@@ -968,10 +968,10 @@ html {
 
 @keyframes rotar {
   from {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: translate(-50%, -50%) rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 

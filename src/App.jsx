@@ -34,6 +34,7 @@ function App() {
     /* Estado del idioma */
     const [idioma, setIdioma] = useState("en");
 
+    /* Carga el video, y el sitio */
     const [carga, setCarga] = useState(true);
 
     /* Cambia el idioma de localstorage y el estado de react */
@@ -59,10 +60,18 @@ function App() {
     };
 
     const cargoElsitio = () => {
+        let cargo = localStorage.getItem("cargoElsitio");
+        let tiempo;
+        if(cargo) {
+            tiempo = 1000;
+        } else {
+            tiempo = 5000;
+            localStorage.setItem("cargoElsitio", true);
+        }
         setTimeout(() => {
             
             setCarga(false);
-        }, 1000);
+        }, tiempo);
     }
 
     useEffect(() => {
@@ -70,7 +79,7 @@ function App() {
     }, [activo]);
 
     useEffect(() => {
-
+        cargoElsitio();
         /* Chequea el idioma elegido o setea el default */
         let idioma = localStorage.getItem("idioma_carlota");
         if (idioma) {
@@ -96,6 +105,7 @@ function App() {
                                             src={Estrella}
                                             alt="spinnin_carga"
                                         ></img>
+                                        <h2>Cargando</h2>
                                     </div>
                                     <div className={`${!carga ? "" : "o-0"}`}>
                                         <Inicio
