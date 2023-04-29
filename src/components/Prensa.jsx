@@ -1,21 +1,16 @@
 import { useState, useEffect } from "react";
 
+import { Link } from "react-router-dom";
+
 import Links from "../utils/Links.jsx"
 import home from "../img/Home_2.webp";
 import estrella from "../img/estrella_blanca.webp";
 
 import { prensa } from "../utils/idiomas.js";
 
-const Prensa = ({desactivar, animar, idioma}) => {
+const Prensa = ({ idioma}) => {
 
-
-    const[activar, setActivar] = useState(false);
     const [estrellaActiva, setEstrellaActiva] = useState(false);
-
-    useEffect(() => {
-        if(animar) setActivar(true);
-        if(!animar) setActivar(false);
-    }, [animar])
 
     useEffect(() => {
         setTimeout(() => {
@@ -24,14 +19,15 @@ const Prensa = ({desactivar, animar, idioma}) => {
     }, [])
 
     return ( 
-        <div id="prensa" className={`transicion ${activar ? "menuActivo" : ""}`}>
+        <div id="prensa">
 
             <img className={`estrella ${estrellaActiva ? "activo" : null}`} loading="lazy" src={estrella} ></img>
 
+
             <div className="contenedor">
-                <div className="house" onClick={desactivar}>
+                <Link to="/" className="house">
                     <img loading="lazy" src={home}></img>
-                </div>
+                </Link>
                 <h2>{prensa[idioma]["titulo1"]}</h2>
                 <Links />
             </div>

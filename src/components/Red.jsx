@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Redes from "../utils/Redes.jsx"
 
 import home from "../img/home_3.webp";
@@ -7,14 +8,10 @@ import estrella from "../img/estrella_blanca.webp";
 
 import {red} from "../utils/idiomas.js";
 
-const Red = ({desactivar, animar, idioma}) => {
-    const[activar, setActivar] = useState(false);
+const Red = ({idioma}) => {
+   
     const [estrellaActiva, setEstrellaActiva] = useState(false);
 
-    useEffect(() => {
-        if(animar) setActivar(true);
-        if(!animar) setActivar(false);
-    }, [animar])
 
     useEffect(() => {
         setTimeout(() => {
@@ -23,14 +20,14 @@ const Red = ({desactivar, animar, idioma}) => {
     }, [])
 
     return ( 
-        <div id="red"  className={`transicion ${activar ? "menuActivo" : ""}`}>
+        <div id="red">
 
             <img className={`estrella ${estrellaActiva ? "activo" : null}`} loading="lazy" src={estrella} ></img>
 
             <div className="contenedor">
-                <div className="house" onClick={desactivar}>
+                <Link to="/" className="house">
                     <img loading="lazy" src={home}></img>
-                </div>
+                </Link>
                 
                 <h2>{red[idioma]["titulo1"]}</h2>
                 

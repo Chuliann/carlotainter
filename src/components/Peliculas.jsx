@@ -2,26 +2,21 @@ import { useState, useEffect } from "react";
 import home from "../img/home_3.webp";
 
 import {peliculas} from "../utils/idiomas.js";
+import { Link } from "react-router-dom";
 
 import proyecto1 from "../img/proyecto1.webp";
 import proyecto2 from "../img/proyecto2.webp";
 import proyecto3 from "../img/proyecto3.webp";
 
-const Peliculas = ({desactivar, animar, idioma}) => {
+const Peliculas = ({idioma}) => {
 
-    const[activar, setActivar] = useState(false);
-
-    useEffect(() => {
-        if(animar) setActivar(true);
-        if(!animar) setActivar(false);
-    }, [animar])
 
     return(
-        <div id="peliculas" className={`transicion ${activar ? "menuActivo" : ""} `}>
+        <div id="peliculas">
             <div className="contenedor">
-                <div className="house" onClick={desactivar}>
+                <Link to="/" className="house">
                     <img  src={home}></img>
-                </div>
+                </Link>
                 <h2>{peliculas[idioma]["titulo1"]}</h2>
                 <div className="contenedor__proyectos">
                     <div className="proyecto">

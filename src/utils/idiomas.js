@@ -171,7 +171,7 @@ en: {
 	titulo1: "Carlota",
 	titulo2: "In the 19th century, Carlota stands up against the slavers.",
 	titulo3: "In the 20th century, Carlota fights against Apartheid.",
-	titulo4: "Today, Carlota creates and communicates in support of all these local, regional and global struggles for emancipation and liberation.",
+	titulo4: "Today, Carlota creates and communicates in support of all those local, regional and global struggles for emancipation and liberation.",
 	titulo5_1: "Need support?",
 	titulo5_2: "Want to collaborate?",
 	titulo5_3: "Write to us at",

@@ -4,33 +4,31 @@ import home from "../img/home_3.webp";
 import foto from "../img/Foto_2.webp";
 import estrella from "../img/estrella_amarilla.webp";
 
+import { Link } from "react-router-dom";
+
 import {tu} from "../utils/idiomas.js";
 
-const Tu = ({ desactivar, idioma, animar }) => {
+const Tu = ({ idioma, useWindowDimensions }) => {
 
-    const[activar, setActivar] = useState(false);
     const [estrellaActiva, setEstrellaActiva] = useState(false);
-
-    useEffect(() => {
-        if(animar) setActivar(true);
-        if(!animar) setActivar(false);
-    }, [animar])
+    const {width, height} = useWindowDimensions();
 
     useEffect(() => {
         setTimeout(() => {
             setEstrellaActiva(true);
         }, 1000);
+        console.log(width, height);
     }, [])
 
     return ( 
-        <div id="tu" className={`transicion ${activar ? "menuActivo" : ""}`}>
+        <div id="tu" style={{height: `${height}px`}}>
 
             <img className={`estrella ${estrellaActiva ? "activo" : null}`} loading="lazy" src={estrella} ></img>
 
             <div className="contenedor">
-                <div onClick={() => desactivar()} className="house">
+                <Link to="/" className="house">
                     <img src={home}></img>
-                </div>
+                </Link>
 
                 <h2>{tu[idioma]["titulo1"]}</h2>
 

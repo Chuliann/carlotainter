@@ -8,29 +8,22 @@ import foto6 from "../img/Foto_caja_6.webp";
 import foto7 from "../img/Foto_caja_7.webp";
 import foto8 from "../img/Foto_caja_8.webp";
 
+import { Link } from "react-router-dom";
+
 import {menu} from "../utils/idiomas.js";
 
-const Menu = ({setActivo, activo, setOcultar, idioma}) => {
+const Menu = ({idioma}) => {
 
-    const handleMenu = (seccion) => {
-        setActivo({
-            ...activo,
-            [seccion]: true
-        });
-        setTimeout(() => {
-            setOcultar(true);
-        }, 450)
-    }
 
     return ( 
         <div id="menu">
 
             <div className="contenedor">
-                <div onClick={() => handleMenu("tu")} className="elemento">
+                <Link to="/you" className="elemento">
                     <img loading="lazy" src={foto1}></img>
                     <p>{menu[idioma]["titulo1"]}</p>
-                </div>
-                <div className="elemento" onClick={() => handleMenu("proyectos")}>
+                </Link>
+                <Link to="/proyects" className="elemento">
                     <img loading="lazy" src={foto2}></img>
                     <p>
                         {menu[idioma]["titulo2"]}
@@ -39,34 +32,37 @@ const Menu = ({setActivo, activo, setOcultar, idioma}) => {
                         <br></br>
                         {menu[idioma]["titulo2_2"]}
                     </p>
-                </div>
-                <div className="elemento tienda">
+                </Link>
+                <Link to="/" className="elemento tienda">
                     <img loading="lazy" src={foto3}></img>
                     <p>{menu[idioma]["titulo3"]} <br></br> {menu[idioma]["titulo3_1"]}</p>
-                </div>
-                <div className="elemento" onClick={() => handleMenu("red")}>
-                    <img loading="lazy" src={foto4}></img>
-                    <p>{menu[idioma]["titulo4"]}</p>
-                </div>
-                <div className="elemento" onClick={() => handleMenu("peliculas")}>
-                    <img loading="lazy" src={foto5}></img>
-                    <p>{menu[idioma]["titulo5"]}<br></br>{menu[idioma]["titulo5_1"]}</p>
-                </div>
-                <div className="elemento" onClick={() => window.open("https://festival.carlota.international/")}>
+                </Link>
+                <div to="/" className="elemento" onClick={() => window.open("https://festival.carlota.international/")}>
                     <img loading="lazy" src={foto6}></img>
                     <p>{menu[idioma]["titulo6"]}<br></br>{menu[idioma]["titulo6_1"]}<br></br>{menu[idioma]["titulo6_2"]}</p>
                 </div>
-                <div className={`elemento ${idioma == "en" ? "correr" : ""}`} onClick={() => handleMenu("prensa")}>
-                    <img loading="lazy" src={foto7}></img>
-                    <p>{menu[idioma]["titulo7"]} <br></br>{menu[idioma]["titulo7_1"]}</p>
-                </div>
-                <div className="elemento" onClick={() => handleMenu("carlota")}>
+                <Link to="/carlota" className="elemento">
                     <img loading="lazy" src={foto8}></img>
                     <p>{menu[idioma]["titulo8"]}<br></br>{menu[idioma]["titulo8_1"]}<br></br>{menu[idioma]["titulo8_2"]}</p>
-                </div>
+                </Link>
+
+
+            {/* <Link to="/grid" className="elemento">
+                <img loading="lazy" src={foto4}></img>
+                <p>{menu[idioma]["titulo4"]}</p>
+            </Link>
+            <Link to="/movies" className="elemento" >
+                <img loading="lazy" src={foto5}></img>
+                <p>{menu[idioma]["titulo5"]}<br></br>{menu[idioma]["titulo5_1"]}</p>
+            </Link> 
+            <Link to="/press" className={`elemento ${idioma == "en" ? "correr" : ""}`} >
+                    <img loading="lazy" src={foto7}></img>
+                    <p>{menu[idioma]["titulo7"]} <br></br>{menu[idioma]["titulo7_1"]}</p>
+            </Link> */}
+           
             </div>
         </div>
      );
-}
- 
+    }
+    
 export default Menu;

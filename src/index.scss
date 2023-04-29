@@ -82,7 +82,8 @@ html {
 #inicio {
   height: 100vh;
   margin-left: -2px;
-  background-image: url(img/fondo_1.png);
+  /* background-image: url(img/fondo_1.png); */
+  background-image: url(img/Fondo2menu.png); 
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -103,7 +104,7 @@ html {
     font-family: tercera;
     font-weight: bold;
     color: var(--amarillo);
-    font-size: 1.2vw;
+    font-size: 1.7rem;
 
     & a {
       cursor: pointer;
@@ -175,7 +176,7 @@ html {
   & .contenedor {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 
     & .elemento {
       background-color: rgb(44, 42, 42);
@@ -403,7 +404,7 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   padding-bottom: 4rem;
-
+  height: 100vh;
 
   overflow-x: hidden;
 
@@ -421,7 +422,7 @@ html {
     max-width: 25vw;
     top: 10vw;
     right: -13.2vw;
-    transform: translate(-20vw, -20vw);
+    transform: translate(20vw, 0);
     transition: transform 1s ease-in-out, opacity .1s ease;
   }
 
@@ -509,7 +510,7 @@ html {
   flex-direction: column;
   align-items: center;
   
-  background-image: url(img/fondo_5.png);
+  background-image: url(./img/Fondo2menu.png);
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: -4px;
@@ -560,7 +561,7 @@ html {
         }
 
         & h3 {
-          color: var(--amarillo);
+          color: black;
           margin: 0;
         }
         & p {
@@ -764,7 +765,7 @@ html {
   flex-direction: column;
   align-items: center;
   
-  background-image: url(img/fondo_5.png);
+  background-image: url(./img/Fondo3.png);
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: -4px;
@@ -844,13 +845,18 @@ html {
   display: flex;
   flex-direction: column;
 
+  height: 100vh;
+
   & .house {
     margin-bottom:  3rem;
     margin-top: 3rem;
   }
 
   & .contenedor {
-    
+    display: flex;
+    flex-direction: column;
+
+
     max-width: 40vw;
     margin-left: 5vw;
 
@@ -1075,7 +1081,7 @@ html {
     }
 
     & .contenedor {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       max-width: 90vw;
 
 
@@ -1147,9 +1153,7 @@ html {
   }
 
   #tu {
-    height: 120vh;
-    padding-top: 25vh;
-    margin-top: -20vh;
+    height: auto;
     display: block;
     
     & .house {
@@ -1345,7 +1349,7 @@ html {
   #peliculas {
     margin-top: 0rem;
     padding-top: 2rem;
-    background-image: url(./img/fondo_8.png);
+    background-image: url(./img/Fondo3.png);
     height: auto;
 
     & .house {
@@ -1404,7 +1408,11 @@ html {
 
       & .textura__contenedor {
         position: relative;
-        height: 50vh;
+        min-height: 50px;
+
+        & .textura {
+          position: initial;
+        }
       }
 
       & .textura {

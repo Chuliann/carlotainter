@@ -1,28 +1,23 @@
-import { useState, useEffect } from "react";
-
 import home from "../img/home_1.webp";
 import fondo_correo from "../img/boton_mail.webp"
 import textura from "../img/textura_circulos_2.webp";
+import { Link } from "react-router-dom";
 
 import { carlota } from "../utils/idiomas.js";
 
-const Carlota = ({desactivar, animar, idioma}) => {
+const Carlota = ({idioma, useWindowDimensions}) => {
 
-    const[activar, setActivar] = useState(false);
 
-    useEffect(() => {
-        if(animar) setActivar(true);
-        if(!animar) setActivar(false);
-    }, [animar])
+    const {width, height} = useWindowDimensions();
 
     return ( 
-        <div id="carlota"  className={`transicion ${activar ? "menuActivo" : ""}`}>
+        <div id="carlota" style={{height: `${height}px`}}>
 
 
             <div className="contenedor">
-                <div className="house" onClick={desactivar}>
+                <Link to={"/"} className="house" preventScrollReset={true}>
                     <img loading="lazy" src={home}></img>
-                </div>
+                </Link>
                 <div className="info">
                     <h2>{carlota[idioma]["titulo1"]}</h2>
                     <p>{carlota[idioma]["titulo2"]}</p>
@@ -36,7 +31,7 @@ const Carlota = ({desactivar, animar, idioma}) => {
                         <img loading="lazy" src={fondo_correo}></img>
                     </div>
                 </div>
-                <div className="textura__contenedor">
+                <div className="textura__contenedor" style={width < 764 ? {height: `${height / 2}px`} : {height: "auto"}}>
                     <img loading="lazy" className="textura" src={textura}></img>
                     <div className="contacto celular">
                         <p>{carlota[idioma]["titulo5_1"]} <br></br> {carlota[idioma]["titulo5_2"]} <br></br> {carlota[idioma]["titulo5_3"]}</p>

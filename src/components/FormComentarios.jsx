@@ -65,6 +65,7 @@ const FormComentarios = ({ idioma }) => {
                     id="nombre"
                     value={campos.nombre}
                     name="nombre"
+                    type="text"
                 />
             </div>
             <div className="campo campo2">
@@ -74,6 +75,7 @@ const FormComentarios = ({ idioma }) => {
                 <input
                     onChange={(e) => handleChange(e)}
                     name="correo"
+                    type="email"
                     value={campos.correo}
                     id="correo"
                 />
