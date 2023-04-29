@@ -83,7 +83,7 @@ export const tu = {
 		titulo3_1: "¿Necesitas apoyo?", 
 		titulo3_2: "¿Quieres colaborar?",
 		titulo3_3: "Escríbenos a",
-		titulo4: "colabora@carlota.international"
+		titulo4: "info@carlota.international"
 },
 en: {
 	titulo1: "You",
@@ -95,7 +95,7 @@ en: {
 	titulo3_1: "Need support?",
 	titulo3_2: "Want to collaborate?",
 	titulo3_3: "Write to us at",
-	titulo4: "hello@carlota.international"
+	titulo4: "info@carlota.international"
 }
 }
 
@@ -164,7 +164,7 @@ export const carlota = {
 		titulo5_1: "¿Necesitas apoyo?", 
 		titulo5_2: "¿Quieres colaborar?",
 		titulo5_3: "Escríbenos a",
-		titulo6: "colabora@carlota.international"
+		titulo6: "info@carlota.international"
 			
 },
 en: {
@@ -175,6 +175,6 @@ en: {
 	titulo5_1: "Need support?",
 	titulo5_2: "Want to collaborate?",
 	titulo5_3: "Write to us at",
-	titulo6: "hello@carlota.international"
+	titulo6: "info@carlota.international"
 }
 }
