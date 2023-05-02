@@ -83,7 +83,9 @@ html {
   height: 100vh;
   margin-left: -2px;
   /* background-image: url(img/fondo_1.png); */
-  background-image: url(img/Fondo2menu.png); 
+ /*  background-image: url(img/Fondo2menu.png);  */
+  /* background-image: url(img/bk2.png);  */
+  background-image: url(img/bk2mejorado.png);
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -161,6 +163,7 @@ html {
 #menu {
   position: relative;
   background-image: url(img/fondo_2.png);
+  /* background-image: url(img/Fondo3.png); */
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -510,11 +513,13 @@ html {
   flex-direction: column;
   align-items: center;
   
-  background-image: url(./img/Fondo2menu.png);
+  background-image: url(./img/bk2mejorado.png);
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: -4px;
   padding-bottom: 5rem;
+
+  height: 100vh;
 
   & .house {
     margin: 0 0 1rem 1rem;
@@ -1164,8 +1169,8 @@ html {
     & .estrella {
       max-width: 50vw;
       right: auto;
-      left: -22vw;
-      top: 10vh;
+      left: -26vw;
+      top: 16vh;
       transform: translate(-50vw, -75vw);
     }
   
@@ -1192,12 +1197,13 @@ html {
         align-items: center;
         margin-bottom: 3rem;
         & img {
-          max-width: 100vw;
+          width: 100vw;
+          max-width: 300px;
         }
   
         & p {
           position:initial;
-          font-size: 4vw;
+          font-size: 1rem;
           margin-top: .5rem;
           line-height: 1.3;
         }
@@ -1205,19 +1211,21 @@ html {
   
       & .info {
         & p {
-          font-size: 3.5vw;
+          font-size: 1rem;
         }
  
         & .correo {
           max-width: 90vw;
           margin: 1rem auto;
           & p {
-            font-size: 4.5vw;
+            font-size: 2rem;
             margin-left: 0;
             left: 45%;
+            transform: translate(-45%, -50%);
           }
           & img {
-            max-width: 85vw;
+            max-width: 400px;
+            width: 85vw;
           }
         }
       }
@@ -1384,13 +1392,67 @@ html {
     }
   }
 
+  
+
+  .transicion {
+    position: relative!important;
+    bottom: initial;
+    left: initial;
+    top: initial;
+    right: initial;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 480px) {
+
+
+  #tu {
+
+    & .contenedor {
+
+
+      & .info {
+
+        & .correo {
+
+          & p {
+            font-size: 6vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.menuActivo {
+  transform: scale(1);
+  opacity: 1;
+}
+.swal2-shown {
+  padding-right: 0!important;
+}
+
+#admin h1,
+#admin h2,
+#admin td,
+#admin th, 
+#admin p {
+  font-family: tercera;
+}
+
+@media only screen and (max-width: 1024px) {
   #carlota {
     align-items: flex-end;
     overflow: auto;
     height: 100vh;
     margin-left: -10px;
     padding-right: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 
 
     & .house {
@@ -1408,7 +1470,7 @@ html {
 
       & .textura__contenedor {
         position: relative;
-        min-height: 50px;
+        flex-basis: 1;
 
         & .textura {
           position: initial;
@@ -1425,14 +1487,14 @@ html {
       }
 
       & .info {
-        
+        flex-basis: 1;
         & h2 {
-          font-size: 1.4rem;
+          font-size: 2rem;
           text-shadow: -5px 0 0 var(--violeta);
           margin-left: 5px;
         }
         & p {
-          font-size: 1rem;
+          font-size: 1.5rem;
         }
       }
 
@@ -1460,33 +1522,4 @@ html {
       }
     }
   }
-
-  .transicion {
-    position: relative!important;
-    bottom: initial;
-    left: initial;
-    top: initial;
-    right: initial;
-  }
-}
-
-
-
-
-
-
-.menuActivo {
-  transform: scale(1);
-  opacity: 1;
-}
-.swal2-shown {
-  padding-right: 0!important;
-}
-
-#admin h1,
-#admin h2,
-#admin td,
-#admin th, 
-#admin p {
-  font-family: tercera;
-}
+}  

@@ -18,7 +18,7 @@ const Carlota = ({idioma, useWindowDimensions}) => {
                 <Link to={"/"} className="house" preventScrollReset={true}>
                     <img loading="lazy" src={home}></img>
                 </Link>
-                <div className="info">
+                <div className="info" style={width < 764 ? {height: `${(height / 2)}px`} : {height: "auto"}}>
                     <h2>{carlota[idioma]["titulo1"]}</h2>
                     <p>{carlota[idioma]["titulo2"]}</p>
                     <p>{carlota[idioma]["titulo3"]}</p>
@@ -31,7 +31,7 @@ const Carlota = ({idioma, useWindowDimensions}) => {
                         <img loading="lazy" src={fondo_correo}></img>
                     </div>
                 </div>
-                <div className="textura__contenedor" style={width < 764 ? {height: `${height / 2}px`} : {height: "auto"}}>
+                <div className="textura__contenedor" style={width < 764 ? {height: `${(height / 2) - 20 }px`} : {height: "auto"}}>
                     <img loading="lazy" className="textura" src={textura}></img>
                     <div className="contacto celular">
                         <p>{carlota[idioma]["titulo5_1"]} <br></br> {carlota[idioma]["titulo5_2"]} <br></br> {carlota[idioma]["titulo5_3"]}</p>
